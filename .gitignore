@@ -54,3 +54,30 @@ temp/
 *.tar
 *.tar.gz
 *.7z
+
+# =========================
+# Local data CSVs and leftovers
+# =========================
+data/
+logs/
+notebooks/
+12_quick_3d_clean_test_summary.csv
+
+# CSV path files / dataset index files
+*paths*.csv
+*patient_paths*.csv
+*slice*.csv
+name_mapping_validation_data.csv
+survival_evaluation.csv
+
+# detailed logs and metrics not needed in repo
+*training_log.csv
+*metrics*.csv
+*robustness_report_table.csv
+
+# extra local result previews
+results/BraTS20_Training_002_*.png
+results/*predictions*.png
+results/*patch_preview*.png
+results/19_visualize_*_levels_all_modalities.png
+results/05b_selected_training_slices_preview.png
