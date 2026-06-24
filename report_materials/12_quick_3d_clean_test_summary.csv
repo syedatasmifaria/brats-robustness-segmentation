@@ -1,0 +1,2 @@
+model_path,test_csv,num_test_patients_used,patches_per_patient,total_patches_tested,patch_size,mean_tumor_dice,std_tumor_dice,mean_tumor_iou,std_tumor_iou,mean_dice_class_1,mean_dice_class_2,mean_dice_class_3
+/home/xfh25/brats_segmentation_project/models/3d_unet_flair_clean_quick.pth,/home/xfh25/brats_segmentation_project/data/csvs/test_paths.csv,20,2,40,"(96, 96, 96)",0.4272899047832047,0.2003591198354205,0.2923321782314051,0.16362511561530063,0.033544052431825316,0.5712989726490691,0.005296639050021226

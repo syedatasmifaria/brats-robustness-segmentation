@@ -1,0 +1,2 @@
+num_test_patients,patches_per_patient,total_patches,mean_whole_tumor_dice,std_whole_tumor_dice,mean_whole_tumor_iou,std_whole_tumor_iou,mean_dice_class_1,mean_dice_class_2,mean_dice_class_3,mean_iou_class_1,mean_iou_class_2,mean_iou_class_3,mean_true_tumor_voxels,mean_pred_tumor_voxels
+74,4,296,0.8938480753785133,0.0739788603350789,0.8150402866808725,0.10548038786918068,0.633589644125377,0.7496263267169999,0.7256974427288769,0.5134072241660402,0.630307562642302,0.6158197902398869,90400.77702702703,82257.61486486487

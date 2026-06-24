@@ -1,0 +1,24 @@
+nnU-Net dataset preparation summary
+================================================================================
+
+Dataset folder: /home/xfh25/brats_segmentation_project/nnunet/nnUNet_raw/Dataset501_BraTS2020Multimodal
+Dataset JSON: /home/xfh25/brats_segmentation_project/nnunet/nnUNet_raw/Dataset501_BraTS2020Multimodal/dataset.json
+
+Train patients: 294
+Test patients: 74
+
+imagesTr files: 1176 / expected 1176
+labelsTr files: 294 / expected 294
+imagesTs files: 296 / expected 296
+
+Channel mapping:
+0000 = FLAIR
+0001 = T1
+0002 = T1ce
+0003 = T2
+
+Label mapping:
+0 = background
+1 = BraTS original label 1
+2 = BraTS original label 2
+3 = BraTS original label 4 remapped to 3

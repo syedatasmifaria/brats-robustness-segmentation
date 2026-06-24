@@ -1,0 +1,56 @@
+# =========================
+# Python / editor / system
+# =========================
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+.vscode/
+*.log
+
+# =========================
+# Raw BraTS medical data
+# NEVER push patient data
+# =========================
+data/BraTS2020_TrainingData/
+data/**/*.nii
+data/**/*.nii.gz
+*.nii
+*.nii.gz
+
+# =========================
+# Model checkpoints
+# =========================
+models/
+*.pth
+*.pt
+*.ckpt
+*.onnx
+
+# =========================
+# nnU-Net generated data/results
+# Too large and may include copied medical images
+# =========================
+nnunet/nnUNet_raw/
+nnunet/nnUNet_preprocessed/
+nnunet/nnUNet_results/
+
+# =========================
+# Large result files
+# Keep summaries and plots, exclude huge per-slice/per-patch metric tables
+# =========================
+results/*metrics.csv
+results/08_full_degraded_test_metrics.csv
+results/18_full_multimodal_3d_degraded_test_metrics.csv
+
+report_materials/*metrics.csv
+
+# =========================
+# Temporary/archive files
+# =========================
+tmp/
+temp/
+*.zip
+*.tar
+*.tar.gz
+*.7z
