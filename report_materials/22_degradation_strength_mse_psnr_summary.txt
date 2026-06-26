@@ -1,0 +1,41 @@
+Script 22: Degradation strength analysis using MSE and PSNR
+================================================================================
+
+Test patients used: 20
+Patches per patient: 4
+Patch size: (96, 96, 96)
+Modalities: FLAIR, T1, T1ce, T2
+Images normalized to [0, 1] before MSE/PSNR calculation.
+
+Interpretation guide:
+- Higher MSE means stronger image change.
+- Lower PSNR means stronger degradation.
+- If an artifact has very low MSE and very high PSNR, it may be too weak.
+
+Overall 4-modal summary:
+--------------------------------------------------------------------------------
+blur level 1: mean MSE=0.000325, mean PSNR=35.29 dB, params={'sigma': 0.5}
+blur level 2: mean MSE=0.002031, mean PSNR=27.28 dB, params={'sigma': 1.0}
+blur level 3: mean MSE=0.003571, mean PSNR=24.79 dB, params={'sigma': 1.5}
+blur level 4: mean MSE=0.005020, mean PSNR=23.27 dB, params={'sigma': 2.0}
+blur level 5: mean MSE=0.006366, mean PSNR=22.21 dB, params={'sigma': 2.5}
+contrast level 1: mean MSE=0.001466, mean PSNR=28.41 dB, params={'factor': 0.9}
+contrast level 2: mean MSE=0.013192, mean PSNR=18.87 dB, params={'factor': 0.7}
+contrast level 3: mean MSE=0.036644, mean PSNR=14.43 dB, params={'factor': 0.5}
+contrast level 4: mean MSE=0.052768, mean PSNR=12.85 dB, params={'factor': 0.4}
+contrast level 5: mean MSE=0.071823, mean PSNR=11.51 dB, params={'factor': 0.3}
+ghosting level 1: mean MSE=0.000900, mean PSNR=30.70 dB, params={'num_ghosts': 4, 'intensity': 0.15}
+ghosting level 2: mean MSE=0.001884, mean PSNR=27.49 dB, params={'num_ghosts': 8, 'intensity': 0.25}
+ghosting level 3: mean MSE=0.002958, mean PSNR=25.53 dB, params={'num_ghosts': 12, 'intensity': 0.35}
+ghosting level 4: mean MSE=0.004364, mean PSNR=23.85 dB, params={'num_ghosts': 16, 'intensity': 0.45}
+ghosting level 5: mean MSE=0.005659, mean PSNR=22.72 dB, params={'num_ghosts': 20, 'intensity': 0.55}
+noise level 1: mean MSE=0.000304, mean PSNR=35.18 dB, params={'std': 0.02}
+noise level 2: mean MSE=0.001211, mean PSNR=29.18 dB, params={'std': 0.04}
+noise level 3: mean MSE=0.002705, mean PSNR=25.69 dB, params={'std': 0.06}
+noise level 4: mean MSE=0.004772, mean PSNR=23.23 dB, params={'std': 0.08}
+noise level 5: mean MSE=0.007382, mean PSNR=21.33 dB, params={'std': 0.1}
+ringing level 1: mean MSE=0.000373, mean PSNR=34.48 dB, params={'keep_fraction': 0.85}
+ringing level 2: mean MSE=0.000618, mean PSNR=32.28 dB, params={'keep_fraction': 0.75}
+ringing level 3: mean MSE=0.001007, mean PSNR=30.16 dB, params={'keep_fraction': 0.65}
+ringing level 4: mean MSE=0.001551, mean PSNR=28.27 dB, params={'keep_fraction': 0.55}
+ringing level 5: mean MSE=0.002303, mean PSNR=26.55 dB, params={'keep_fraction': 0.45}
