@@ -1,0 +1,37 @@
+Script 23: nnU-Net validation summary
+================================================================================
+
+Model:
+nnU-Net v2 standard 3d_fullres, fold 0
+
+Dataset:
+Dataset501_BraTS2020Multimodal
+Input modalities: FLAIR, T1, T1ce, T2
+Training data: clean BraTS2020 images only
+
+Source summary.json:
+/home/xfh25/brats_segmentation_project/nnunet/nnUNet_results/Dataset501_BraTS2020Multimodal/nnUNetTrainer__nnUNetPlans__3d_fullres/fold_0/validation/summary.json
+
+Number of validation cases in summary.json: 59
+
+Main validation metrics:
+--------------------------------------------------------------------------------
+Foreground mean Dice: 0.771978
+Foreground mean IoU:  0.669896
+
+Class-wise validation metrics:
+--------------------------------------------------------------------------------
+Class 1 / BraTS original label 1
+  Dice: 0.690737
+  IoU:  0.578789
+
+Class 2 / BraTS original label 2
+  Dice: 0.807248
+  IoU:  0.703985
+
+Class 3 / BraTS original label 4 remapped to 3
+  Dice: 0.817950
+  IoU:  0.726914
+
+Interpretation note:
+This nnU-Net result comes from the nnU-Net v2 fold-0 validation pipeline. It should not be directly over-compared against the custom 3D U-Net patch-based held-out test result because the evaluation setups differ. The custom 3D U-Net result is patch-based and tumor-centered, while nnU-Net validation follows nnU-Net's own validation pipeline. A fair direct comparison would require matched test data, matched preprocessing, and matched metrics.
