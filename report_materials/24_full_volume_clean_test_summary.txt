@@ -1,0 +1,37 @@
+Script 24: Full-volume clean evaluation for custom 4-modal 3D U-Net
+================================================================================
+
+Purpose:
+Evaluate the already trained custom 3D U-Net on full BraTS2020 test volumes using sliding-window inference.
+
+Important:
+- Testing only; no retraining.
+- Clean images only in this script.
+- Full-volume prediction reconstructed from overlapping 96x96x96 patches.
+
+Model:
+/home/xfh25/brats_segmentation_project/models/3d_unet_multimodal_clean_full_best.pth
+
+Settings:
+Patch size: (96, 96, 96)
+Stride: (64, 64, 64)
+Test patients: 74
+
+Main full-volume clean results:
+--------------------------------------------------------------------------------
+Mean whole tumor Dice: 0.386373
+Std whole tumor Dice:  0.184381
+Mean whole tumor IoU:  0.255923
+Std whole tumor IoU:   0.147497
+
+Class-wise results:
+--------------------------------------------------------------------------------
+Mean Dice class 1: 0.260699
+Mean Dice class 2: 0.301890
+Mean Dice class 3: 0.315730
+Mean IoU class 1:  0.167326
+Mean IoU class 2:  0.194453
+Mean IoU class 3:  0.210520
+
+Interpretation note:
+This result is more comparable to nnU-Net-style validation than the earlier tumor-centered patch result, because this script reconstructs a full-volume prediction using sliding-window inference. However, exact direct comparison with nnU-Net still requires attention to split differences and evaluation protocol differences.
