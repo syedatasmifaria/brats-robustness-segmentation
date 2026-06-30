@@ -1,0 +1,41 @@
+nnU-Net degraded mini-pilot summary
+================================================================================
+
+Model: clean-trained nnU-Net v2 3d_fullres fold 0
+Evaluation: degraded images only, no retraining
+Patients: 2
+Artifacts: blur, noise, contrast, ringing, ghosting
+Levels: 1-5
+
+BraTS-style region definitions:
+WT = labels 1 + 2 + 3
+TC = labels 1 + 3
+ET = label 3
+
+Mean WT Dice by condition:
+--------------------------------------------------------------------------------
+blur_L1: WT Dice=0.937966, WT IoU=0.883527, TC Dice=0.931774, ET Dice=0.893499
+blur_L2: WT Dice=0.937357, WT IoU=0.882453, TC Dice=0.934165, ET Dice=0.873472
+blur_L3: WT Dice=0.935838, WT IoU=0.879613, TC Dice=0.928810, ET Dice=0.836182
+blur_L4: WT Dice=0.926205, WT IoU=0.862569, TC Dice=0.913304, ET Dice=0.803183
+blur_L5: WT Dice=0.912870, WT IoU=0.839736, TC Dice=0.883203, ET Dice=0.777215
+contrast_L1: WT Dice=0.937951, WT IoU=0.883524, TC Dice=0.931879, ET Dice=0.894787
+contrast_L2: WT Dice=0.937952, WT IoU=0.883526, TC Dice=0.931888, ET Dice=0.894802
+contrast_L3: WT Dice=0.937957, WT IoU=0.883535, TC Dice=0.931879, ET Dice=0.894787
+contrast_L4: WT Dice=0.937951, WT IoU=0.883523, TC Dice=0.931888, ET Dice=0.894794
+contrast_L5: WT Dice=0.937956, WT IoU=0.883533, TC Dice=0.931899, ET Dice=0.894812
+ghosting_L1: WT Dice=0.940200, WT IoU=0.887442, TC Dice=0.932353, ET Dice=0.894347
+ghosting_L2: WT Dice=0.942210, WT IoU=0.890955, TC Dice=0.933080, ET Dice=0.893414
+ghosting_L3: WT Dice=0.942465, WT IoU=0.891352, TC Dice=0.933172, ET Dice=0.891378
+ghosting_L4: WT Dice=0.939121, WT IoU=0.885341, TC Dice=0.933260, ET Dice=0.889648
+ghosting_L5: WT Dice=0.922583, WT IoU=0.856297, TC Dice=0.931955, ET Dice=0.886980
+noise_L1: WT Dice=0.937892, WT IoU=0.883418, TC Dice=0.931914, ET Dice=0.894185
+noise_L2: WT Dice=0.937518, WT IoU=0.882768, TC Dice=0.932101, ET Dice=0.892695
+noise_L3: WT Dice=0.937147, WT IoU=0.882110, TC Dice=0.931983, ET Dice=0.890099
+noise_L4: WT Dice=0.936408, WT IoU=0.880845, TC Dice=0.932091, ET Dice=0.887446
+noise_L5: WT Dice=0.935327, WT IoU=0.878948, TC Dice=0.931473, ET Dice=0.883498
+ringing_L1: WT Dice=0.937880, WT IoU=0.883396, TC Dice=0.931964, ET Dice=0.894451
+ringing_L2: WT Dice=0.937842, WT IoU=0.883322, TC Dice=0.932084, ET Dice=0.893482
+ringing_L3: WT Dice=0.937913, WT IoU=0.883453, TC Dice=0.932796, ET Dice=0.891816
+ringing_L4: WT Dice=0.937437, WT IoU=0.882603, TC Dice=0.932924, ET Dice=0.887614
+ringing_L5: WT Dice=0.936100, WT IoU=0.880230, TC Dice=0.932566, ET Dice=0.880654
