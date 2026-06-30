@@ -1,0 +1,22 @@
+nnU-Net degraded smoke-test summary
+================================================================================
+
+Condition: ghosting level 5
+Model: clean-trained nnU-Net v2 3d_fullres fold 0
+Evaluation: degraded images, no retraining
+
+condition: ghosting_L5
+num_patients: 2
+mean_dice_WT: 0.921222
+mean_iou_WT: 0.853972
+mean_dice_TC: 0.931141
+mean_iou_TC: 0.871519
+mean_dice_ET: 0.884661
+mean_iou_ET: 0.793187
+mean_true_voxels_WT: 157737.500000
+mean_pred_voxels_WT: 157750.000000
+
+BraTS-style region definitions:
+WT = labels 1 + 2 + 3
+TC = labels 1 + 3
+ET = label 3
