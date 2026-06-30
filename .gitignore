@@ -81,3 +81,4 @@ results/*predictions*.png
 results/*patch_preview*.png
 results/19_visualize_*_levels_all_modalities.png
 results/05b_selected_training_slices_preview.png
+nnunet/temporary_degraded_tests/
