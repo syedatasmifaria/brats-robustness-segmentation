@@ -1,0 +1,41 @@
+nnU-Net final full degraded evaluation summary
+================================================================================
+
+Model: clean-trained nnU-Net v2 3d_fullres fold 0
+Evaluation: full-volume degraded test images only, no retraining
+Patients: 74
+Artifacts: blur, noise, contrast, ringing, ghosting
+Levels: 1-5
+
+BraTS-style region definitions:
+WT = labels 1 + 2 + 3
+TC = labels 1 + 3
+ET = label 3
+
+Mean metrics by condition:
+--------------------------------------------------------------------------------
+blur_L1: WT Dice=0.917215, WT IoU=0.853112, TC Dice=0.886501, TC IoU=0.811369, ET Dice=0.817069, ET IoU=0.726941, Pred WT voxels=94653.8, True WT voxels=99706.2
+blur_L2: WT Dice=0.916247, WT IoU=0.850906, TC Dice=0.883973, TC IoU=0.806688, ET Dice=0.802566, ET IoU=0.706218, Pred WT voxels=95462.6, True WT voxels=99706.2
+blur_L3: WT Dice=0.909660, WT IoU=0.839453, TC Dice=0.868741, TC IoU=0.782618, ET Dice=0.795302, ET IoU=0.686236, Pred WT voxels=97969.8, True WT voxels=99706.2
+blur_L4: WT Dice=0.895325, WT IoU=0.816220, TC Dice=0.842662, TC IoU=0.744909, ET Dice=0.754558, ET IoU=0.632977, Pred WT voxels=101579.3, True WT voxels=99706.2
+blur_L5: WT Dice=0.877044, WT IoU=0.788050, TC Dice=0.818367, TC IoU=0.709679, ET Dice=0.718037, ET IoU=0.587593, Pred WT voxels=105323.3, True WT voxels=99706.2
+contrast_L1: WT Dice=0.916111, WT IoU=0.851507, TC Dice=0.885641, TC IoU=0.810144, ET Dice=0.817486, ET IoU=0.727530, Pred WT voxels=94379.4, True WT voxels=99706.2
+contrast_L2: WT Dice=0.916116, WT IoU=0.851518, TC Dice=0.885684, TC IoU=0.810211, ET Dice=0.817414, ET IoU=0.727428, Pred WT voxels=94373.4, True WT voxels=99706.2
+contrast_L3: WT Dice=0.916156, WT IoU=0.851585, TC Dice=0.885650, TC IoU=0.810141, ET Dice=0.817229, ET IoU=0.727151, Pred WT voxels=94357.2, True WT voxels=99706.2
+contrast_L4: WT Dice=0.916243, WT IoU=0.851728, TC Dice=0.885506, TC IoU=0.809877, ET Dice=0.816835, ET IoU=0.726584, Pred WT voxels=94327.0, True WT voxels=99706.2
+contrast_L5: WT Dice=0.916403, WT IoU=0.851972, TC Dice=0.884883, TC IoU=0.808813, ET Dice=0.815827, ET IoU=0.725195, Pred WT voxels=94284.8, True WT voxels=99706.2
+ghosting_L1: WT Dice=0.917546, WT IoU=0.853532, TC Dice=0.886979, TC IoU=0.811857, ET Dice=0.818008, ET IoU=0.728780, Pred WT voxels=95626.0, True WT voxels=99706.2
+ghosting_L2: WT Dice=0.915752, WT IoU=0.850002, TC Dice=0.888288, TC IoU=0.813454, ET Dice=0.817589, ET IoU=0.728523, Pred WT voxels=97174.0, True WT voxels=99706.2
+ghosting_L3: WT Dice=0.908718, WT IoU=0.837589, TC Dice=0.887657, TC IoU=0.812226, ET Dice=0.826625, ET IoU=0.736637, Pred WT voxels=99134.6, True WT voxels=99706.2
+ghosting_L4: WT Dice=0.891990, WT IoU=0.810318, TC Dice=0.883626, TC IoU=0.806017, ET Dice=0.830921, ET IoU=0.738683, Pred WT voxels=102339.4, True WT voxels=99706.2
+ghosting_L5: WT Dice=0.860307, WT IoU=0.761967, TC Dice=0.871084, TC IoU=0.789283, ET Dice=0.801636, ET IoU=0.704963, Pred WT voxels=108284.3, True WT voxels=99706.2
+noise_L1: WT Dice=0.916202, WT IoU=0.851580, TC Dice=0.885409, TC IoU=0.809698, ET Dice=0.816494, ET IoU=0.726243, Pred WT voxels=94446.5, True WT voxels=99706.2
+noise_L2: WT Dice=0.915751, WT IoU=0.850790, TC Dice=0.884546, TC IoU=0.808183, ET Dice=0.814144, ET IoU=0.723140, Pred WT voxels=94408.8, True WT voxels=99706.2
+noise_L3: WT Dice=0.914850, WT IoU=0.849216, TC Dice=0.882846, TC IoU=0.805424, ET Dice=0.797900, ET IoU=0.705633, Pred WT voxels=94239.0, True WT voxels=99706.2
+noise_L4: WT Dice=0.913523, WT IoU=0.847032, TC Dice=0.881015, TC IoU=0.802480, ET Dice=0.807744, ET IoU=0.714287, Pred WT voxels=93929.0, True WT voxels=99706.2
+noise_L5: WT Dice=0.911919, WT IoU=0.844407, TC Dice=0.879201, TC IoU=0.799820, ET Dice=0.804127, ET IoU=0.709375, Pred WT voxels=93548.2, True WT voxels=99706.2
+ringing_L1: WT Dice=0.916295, WT IoU=0.851767, TC Dice=0.885995, TC IoU=0.810557, ET Dice=0.817094, ET IoU=0.726962, Pred WT voxels=94397.6, True WT voxels=99706.2
+ringing_L2: WT Dice=0.916229, WT IoU=0.851648, TC Dice=0.886100, TC IoU=0.810633, ET Dice=0.816448, ET IoU=0.725973, Pred WT voxels=94356.6, True WT voxels=99706.2
+ringing_L3: WT Dice=0.915891, WT IoU=0.851112, TC Dice=0.885910, TC IoU=0.810235, ET Dice=0.801604, ET IoU=0.710367, Pred WT voxels=94251.9, True WT voxels=99706.2
+ringing_L4: WT Dice=0.915309, WT IoU=0.850214, TC Dice=0.885374, TC IoU=0.809220, ET Dice=0.785462, ET IoU=0.692688, Pred WT voxels=94032.8, True WT voxels=99706.2
+ringing_L5: WT Dice=0.914052, WT IoU=0.848178, TC Dice=0.883886, TC IoU=0.806577, ET Dice=0.779897, ET IoU=0.684014, Pred WT voxels=93718.5, True WT voxels=99706.2
