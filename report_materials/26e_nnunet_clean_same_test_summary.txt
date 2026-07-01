@@ -1,0 +1,28 @@
+================================================================================
+Step 26E-B: Clean nnU-Net same-test evaluation summary
+================================================================================
+
+Number of test patients: 74
+
+BraTS region metrics:
+WT Dice mean: 0.912460
+WT IoU mean:  0.846193
+TC Dice mean: 0.884438
+TC IoU mean:  0.808667
+ET Dice mean: 0.818585
+ET IoU mean:  0.728300
+
+Class-wise metrics:
+Class 1 Dice mean: 0.722477
+Class 1 IoU mean:  0.608824
+Class 2 Dice mean: 0.791486
+Class 2 IoU mean:  0.684392
+Class 3 Dice mean: 0.818585
+Class 3 IoU mean:  0.728300
+
+Voxel diagnostics:
+Predicted WT voxels mean: 93225.2
+True WT voxels mean:      99706.2
+
+Interpretation note:
+This is the clean nnU-Net baseline on the same 74 test patients used for final degraded nnU-Net evaluation. These clean values should be used as the anchor for Dice and IoU drop calculations.

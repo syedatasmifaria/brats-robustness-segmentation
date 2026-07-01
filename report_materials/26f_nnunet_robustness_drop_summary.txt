@@ -1,0 +1,51 @@
+================================================================================
+Step 26F: nnU-Net robustness drop summary
+================================================================================
+
+Drop formula:
+Drop = clean metric - degraded metric
+
+Clean same-test baseline:
+WT Dice: 0.912460
+WT IoU:  0.846193
+TC Dice: 0.884438
+TC IoU:  0.808667
+ET Dice: 0.818585
+ET IoU:  0.728300
+
+Condition summaries:
+blur_L1: WT Dice 0.912460 -> 0.917215, drop=-0.004755; WT IoU 0.846193 -> 0.853112, drop=-0.006919; TC Dice drop=-0.002063; TC IoU drop=-0.002702; ET Dice drop=0.001516; ET IoU drop=0.001360; Pred WT voxels 93225.2 -> 94653.8
+blur_L2: WT Dice 0.912460 -> 0.916247, drop=-0.003787; WT IoU 0.846193 -> 0.850906, drop=-0.004713; TC Dice drop=0.000465; TC IoU drop=0.001979; ET Dice drop=0.016018; ET IoU drop=0.022082; Pred WT voxels 93225.2 -> 95462.6
+blur_L3: WT Dice 0.912460 -> 0.909660, drop=0.002800; WT IoU 0.846193 -> 0.839453, drop=0.006740; TC Dice drop=0.015697; TC IoU drop=0.026049; ET Dice drop=0.023282; ET IoU drop=0.042064; Pred WT voxels 93225.2 -> 97969.8
+blur_L4: WT Dice 0.912460 -> 0.895325, drop=0.017135; WT IoU 0.846193 -> 0.816220, drop=0.029972; TC Dice drop=0.041776; TC IoU drop=0.063758; ET Dice drop=0.064027; ET IoU drop=0.095323; Pred WT voxels 93225.2 -> 101579.3
+blur_L5: WT Dice 0.912460 -> 0.877044, drop=0.035416; WT IoU 0.846193 -> 0.788050, drop=0.058143; TC Dice drop=0.066071; TC IoU drop=0.098988; ET Dice drop=0.100547; ET IoU drop=0.140707; Pred WT voxels 93225.2 -> 105323.3
+contrast_L1: WT Dice 0.912460 -> 0.916111, drop=-0.003651; WT IoU 0.846193 -> 0.851507, drop=-0.005315; TC Dice drop=-0.001204; TC IoU drop=-0.001477; ET Dice drop=0.001098; ET IoU drop=0.000770; Pred WT voxels 93225.2 -> 94379.4
+contrast_L2: WT Dice 0.912460 -> 0.916116, drop=-0.003656; WT IoU 0.846193 -> 0.851518, drop=-0.005325; TC Dice drop=-0.001246; TC IoU drop=-0.001544; ET Dice drop=0.001170; ET IoU drop=0.000873; Pred WT voxels 93225.2 -> 94373.4
+contrast_L3: WT Dice 0.912460 -> 0.916156, drop=-0.003695; WT IoU 0.846193 -> 0.851585, drop=-0.005392; TC Dice drop=-0.001212; TC IoU drop=-0.001475; ET Dice drop=0.001355; ET IoU drop=0.001149; Pred WT voxels 93225.2 -> 94357.2
+contrast_L4: WT Dice 0.912460 -> 0.916243, drop=-0.003783; WT IoU 0.846193 -> 0.851728, drop=-0.005535; TC Dice drop=-0.001068; TC IoU drop=-0.001210; ET Dice drop=0.001750; ET IoU drop=0.001716; Pred WT voxels 93225.2 -> 94327.0
+contrast_L5: WT Dice 0.912460 -> 0.916403, drop=-0.003943; WT IoU 0.846193 -> 0.851972, drop=-0.005779; TC Dice drop=-0.000445; TC IoU drop=-0.000146; ET Dice drop=0.002758; ET IoU drop=0.003105; Pred WT voxels 93225.2 -> 94284.8
+ghosting_L1: WT Dice 0.912460 -> 0.917546, drop=-0.005086; WT IoU 0.846193 -> 0.853532, drop=-0.007339; TC Dice drop=-0.002541; TC IoU drop=-0.003191; ET Dice drop=0.000577; ET IoU drop=-0.000480; Pred WT voxels 93225.2 -> 95626.0
+ghosting_L2: WT Dice 0.912460 -> 0.915752, drop=-0.003292; WT IoU 0.846193 -> 0.850002, drop=-0.003809; TC Dice drop=-0.003850; TC IoU drop=-0.004787; ET Dice drop=0.000995; ET IoU drop=-0.000222; Pred WT voxels 93225.2 -> 97174.0
+ghosting_L3: WT Dice 0.912460 -> 0.908718, drop=0.003742; WT IoU 0.846193 -> 0.837589, drop=0.008604; TC Dice drop=-0.003219; TC IoU drop=-0.003559; ET Dice drop=-0.008040; ET IoU drop=-0.008337; Pred WT voxels 93225.2 -> 99134.6
+ghosting_L4: WT Dice 0.912460 -> 0.891990, drop=0.020470; WT IoU 0.846193 -> 0.810318, drop=0.035875; TC Dice drop=0.000811; TC IoU drop=0.002650; ET Dice drop=-0.012337; ET IoU drop=-0.010383; Pred WT voxels 93225.2 -> 102339.4
+ghosting_L5: WT Dice 0.912460 -> 0.860307, drop=0.052153; WT IoU 0.846193 -> 0.761967, drop=0.084226; TC Dice drop=0.013354; TC IoU drop=0.019383; ET Dice drop=0.016948; ET IoU drop=0.023337; Pred WT voxels 93225.2 -> 108284.3
+noise_L1: WT Dice 0.912460 -> 0.916202, drop=-0.003742; WT IoU 0.846193 -> 0.851580, drop=-0.005388; TC Dice drop=-0.000971; TC IoU drop=-0.001031; ET Dice drop=0.002090; ET IoU drop=0.002058; Pred WT voxels 93225.2 -> 94446.5
+noise_L2: WT Dice 0.912460 -> 0.915751, drop=-0.003291; WT IoU 0.846193 -> 0.850790, drop=-0.004597; TC Dice drop=-0.000108; TC IoU drop=0.000484; ET Dice drop=0.004440; ET IoU drop=0.005160; Pred WT voxels 93225.2 -> 94408.8
+noise_L3: WT Dice 0.912460 -> 0.914850, drop=-0.002390; WT IoU 0.846193 -> 0.849216, drop=-0.003023; TC Dice drop=0.001592; TC IoU drop=0.003243; ET Dice drop=0.020685; ET IoU drop=0.022668; Pred WT voxels 93225.2 -> 94239.0
+noise_L4: WT Dice 0.912460 -> 0.913523, drop=-0.001063; WT IoU 0.846193 -> 0.847032, drop=-0.000839; TC Dice drop=0.003423; TC IoU drop=0.006187; ET Dice drop=0.010840; ET IoU drop=0.014014; Pred WT voxels 93225.2 -> 93929.0
+noise_L5: WT Dice 0.912460 -> 0.911919, drop=0.000541; WT IoU 0.846193 -> 0.844407, drop=0.001785; TC Dice drop=0.005237; TC IoU drop=0.008847; ET Dice drop=0.014458; ET IoU drop=0.018925; Pred WT voxels 93225.2 -> 93548.2
+ringing_L1: WT Dice 0.912460 -> 0.916295, drop=-0.003835; WT IoU 0.846193 -> 0.851767, drop=-0.005574; TC Dice drop=-0.001557; TC IoU drop=-0.001890; ET Dice drop=0.001491; ET IoU drop=0.001338; Pred WT voxels 93225.2 -> 94397.6
+ringing_L2: WT Dice 0.912460 -> 0.916229, drop=-0.003769; WT IoU 0.846193 -> 0.851648, drop=-0.005455; TC Dice drop=-0.001662; TC IoU drop=-0.001966; ET Dice drop=0.002136; ET IoU drop=0.002327; Pred WT voxels 93225.2 -> 94356.6
+ringing_L3: WT Dice 0.912460 -> 0.915891, drop=-0.003430; WT IoU 0.846193 -> 0.851112, drop=-0.004919; TC Dice drop=-0.001473; TC IoU drop=-0.001568; ET Dice drop=0.016980; ET IoU drop=0.017933; Pred WT voxels 93225.2 -> 94251.9
+ringing_L4: WT Dice 0.912460 -> 0.915309, drop=-0.002849; WT IoU 0.846193 -> 0.850214, drop=-0.004021; TC Dice drop=-0.000936; TC IoU drop=-0.000553; ET Dice drop=0.033122; ET IoU drop=0.035613; Pred WT voxels 93225.2 -> 94032.8
+ringing_L5: WT Dice 0.912460 -> 0.914052, drop=-0.001591; WT IoU 0.846193 -> 0.848178, drop=-0.001985; TC Dice drop=0.000552; TC IoU drop=0.002090; ET Dice drop=0.038687; ET IoU drop=0.044287; Pred WT voxels 93225.2 -> 93718.5
+
+Level-5 ranking by WT Dice drop:
+ghosting: WT Dice drop=0.052153, WT IoU drop=0.084226
+blur: WT Dice drop=0.035416, WT IoU drop=0.058143
+noise: WT Dice drop=0.000541, WT IoU drop=0.001785
+ringing: WT Dice drop=-0.001591, WT IoU drop=-0.001985
+contrast: WT Dice drop=-0.003943, WT IoU drop=-0.005779
+
+Interpretation note:
+These results compare degraded nnU-Net performance against the clean same-patient full-volume test baseline. This is the appropriate basis for robustness claims because the test patients are held constant.
