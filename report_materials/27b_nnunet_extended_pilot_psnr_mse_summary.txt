@@ -1,0 +1,23 @@
+================================================================================
+Script 27B: nnU-Net extended pilot MSE/PSNR summary
+================================================================================
+
+Interpretation:
+Higher MSE means stronger image change.
+Lower PSNR means stronger image change.
+
+noise_L6: MSE mean=0.020429, PSNR mean=16.90 dB, n=20
+noise_L7: MSE mean=0.034145, PSNR mean=14.67 dB, n=20
+noise_L8: MSE mean=0.065490, PSNR mean=11.84 dB, n=20
+noise_L9: MSE mean=0.096286, PSNR mean=10.17 dB, n=20
+noise_L10: MSE mean=0.122969, PSNR mean=9.10 dB, n=20
+contrast_L6: MSE mean=0.034721, PSNR mean=14.88 dB, n=20
+contrast_L7: MSE mean=0.039196, PSNR mean=14.35 dB, n=20
+contrast_L8: MSE mean=0.043943, PSNR mean=13.85 dB, n=20
+contrast_L9: MSE mean=0.048961, PSNR mean=13.38 dB, n=20
+contrast_L10: MSE mean=0.052103, PSNR mean=13.11 dB, n=20
+ringing_L6: MSE mean=0.004169, PSNR mean=24.17 dB, n=20
+ringing_L7: MSE mean=0.006535, PSNR mean=22.16 dB, n=20
+ringing_L8: MSE mean=0.011304, PSNR mean=19.73 dB, n=20
+ringing_L9: MSE mean=0.015591, PSNR mean=18.30 dB, n=20
+ringing_L10: MSE mean=0.025173, PSNR mean=16.19 dB, n=20

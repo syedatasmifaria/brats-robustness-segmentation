@@ -1,0 +1,39 @@
+================================================================================
+Script 27D: nnU-Net extended pilot drop summary
+================================================================================
+
+Drop formula:
+Drop = clean pilot metric - degraded pilot metric
+
+Clean pilot baseline, same 5 patients:
+WT Dice: 0.886883
+WT IoU:  0.807834
+TC Dice: 0.903499
+TC IoU:  0.827023
+ET Dice: 0.827837
+ET IoU:  0.717388
+
+Extended condition summaries:
+noise_L6: WT Dice 0.886883 -> 0.880707, drop=0.006176; WT IoU 0.807834 -> 0.797292, drop=0.010542; TC Dice drop=-0.004389; ET Dice drop=0.019906; Pred WT voxels 113763.4 -> 112958.4
+noise_L7: WT Dice 0.886883 -> 0.872905, drop=0.013979; WT IoU 0.807834 -> 0.786149, drop=0.021684; TC Dice drop=-0.002729; ET Dice drop=0.026247; Pred WT voxels 113763.4 -> 111462.4
+noise_L8: WT Dice 0.886883 -> 0.861770, drop=0.025113; WT IoU 0.807834 -> 0.769343, drop=0.038491; TC Dice drop=0.002709; ET Dice drop=0.029874; Pred WT voxels 113763.4 -> 108629.4
+noise_L9: WT Dice 0.886883 -> 0.845268, drop=0.041615; WT IoU 0.807834 -> 0.745615, drop=0.062219; TC Dice drop=0.007879; ET Dice drop=0.033107; Pred WT voxels 113763.4 -> 104397.0
+noise_L10: WT Dice 0.886883 -> 0.826564, drop=0.060319; WT IoU 0.807834 -> 0.719151, drop=0.088683; TC Dice drop=0.016343; ET Dice drop=0.040690; Pred WT voxels 113763.4 -> 100264.2
+contrast_L6: WT Dice 0.886883 -> 0.893184, drop=-0.006301; WT IoU 0.807834 -> 0.815563, drop=-0.007730; TC Dice drop=-0.003042; ET Dice drop=0.003246; Pred WT voxels 113763.4 -> 114955.4
+contrast_L7: WT Dice 0.886883 -> 0.893647, drop=-0.006764; WT IoU 0.807834 -> 0.816148, drop=-0.008315; TC Dice drop=-0.003074; ET Dice drop=0.003004; Pred WT voxels 113763.4 -> 114993.0
+contrast_L8: WT Dice 0.886883 -> 0.894566, drop=-0.007682; WT IoU 0.807834 -> 0.817308, drop=-0.009474; TC Dice drop=-0.003188; ET Dice drop=0.002556; Pred WT voxels 113763.4 -> 115073.6
+contrast_L9: WT Dice 0.886883 -> 0.896810, drop=-0.009927; WT IoU 0.807834 -> 0.820189, drop=-0.012355; TC Dice drop=-0.003640; ET Dice drop=0.001658; Pred WT voxels 113763.4 -> 115293.2
+contrast_L10: WT Dice 0.886883 -> 0.897113, drop=-0.010230; WT IoU 0.807834 -> 0.820536, drop=-0.012703; TC Dice drop=-0.003774; ET Dice drop=0.001723; Pred WT voxels 113763.4 -> 115398.6
+ringing_L6: WT Dice 0.886883 -> 0.883512, drop=0.003371; WT IoU 0.807834 -> 0.802669, drop=0.005165; TC Dice drop=-0.003833; ET Dice drop=0.024374; Pred WT voxels 113763.4 -> 113819.6
+ringing_L7: WT Dice 0.886883 -> 0.885570, drop=0.001313; WT IoU 0.807834 -> 0.804058, drop=0.003775; TC Dice drop=0.000723; ET Dice drop=0.054636; Pred WT voxels 113763.4 -> 115854.0
+ringing_L8: WT Dice 0.886883 -> 0.878058, drop=0.008825; WT IoU 0.807834 -> 0.787281, drop=0.020553; TC Dice drop=0.031399; ET Dice drop=0.133425; Pred WT voxels 113763.4 -> 127516.8
+ringing_L9: WT Dice 0.886883 -> 0.831737, drop=0.055146; WT IoU 0.807834 -> 0.719373, drop=0.088461; TC Dice drop=0.121775; ET Dice drop=0.195124; Pred WT voxels 113763.4 -> 139005.6
+ringing_L10: WT Dice 0.886883 -> 0.638287, drop=0.248596; WT IoU 0.807834 -> 0.496736, drop=0.311098; TC Dice drop=0.394054; ET Dice drop=0.328419; Pred WT voxels 113763.4 -> 206966.6
+
+Potential breaking threshold check:
+Suggested break threshold: WT Dice drop >= 0.10 or WT IoU drop >= 0.15
+
+ringing_L10: WT Dice drop=0.248596, WT IoU drop=0.311098
+
+Interpretation note:
+This is a 5-patient pilot stress test. It should be used to decide whether L6-L10 are useful before scaling to all 74 test patients.
