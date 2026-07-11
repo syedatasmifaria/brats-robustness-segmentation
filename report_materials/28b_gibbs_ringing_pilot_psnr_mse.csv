@@ -1,0 +1,6 @@
+patient_id,artifact,level,strength,wavelength,mse,psnr_db
+BraTS20_Training_001,gibbs_ringing,gibbs_L1,0.045,7.0,0.00013655169459525496,38.64702905932145
+BraTS20_Training_001,gibbs_ringing,gibbs_L2,0.075,6.5,0.0003870062646456063,34.12282004802801
+BraTS20_Training_001,gibbs_ringing,gibbs_L3,0.11,6.0,0.0008463045815005898,30.72473308049656
+BraTS20_Training_001,gibbs_ringing,gibbs_L4,0.155,5.5,0.0016978197963908315,27.701084068990156
+BraTS20_Training_001,gibbs_ringing,gibbs_L5,0.21,5.0,0.0031212500762194395,25.056714340353317

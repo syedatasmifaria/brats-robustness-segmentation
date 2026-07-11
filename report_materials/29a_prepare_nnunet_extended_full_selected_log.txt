@@ -1,0 +1,189 @@
+================================================================================
+Script 29A: Prepare full 74-patient extended nnU-Net inputs
+================================================================================
+Output root: /home/xfh25/brats_segmentation_project/nnunet/temporary_degraded_tests/extended_full_selected
+Artifacts: noise, contrast, ringing/frequency-domain
+Levels: L6-L10
+Testing only. No training.
+================================================================================
+
+[1/74] Preparing patient: BraTS20_Training_001
+
+[2/74] Preparing patient: BraTS20_Training_004
+
+[3/74] Preparing patient: BraTS20_Training_006
+
+[4/74] Preparing patient: BraTS20_Training_010
+
+[5/74] Preparing patient: BraTS20_Training_016
+
+[6/74] Preparing patient: BraTS20_Training_023
+
+[7/74] Preparing patient: BraTS20_Training_026
+
+[8/74] Preparing patient: BraTS20_Training_031
+
+[9/74] Preparing patient: BraTS20_Training_034
+
+[10/74] Preparing patient: BraTS20_Training_040
+
+[11/74] Preparing patient: BraTS20_Training_043
+
+[12/74] Preparing patient: BraTS20_Training_046
+
+[13/74] Preparing patient: BraTS20_Training_047
+
+[14/74] Preparing patient: BraTS20_Training_056
+
+[15/74] Preparing patient: BraTS20_Training_057
+
+[16/74] Preparing patient: BraTS20_Training_058
+
+[17/74] Preparing patient: BraTS20_Training_064
+
+[18/74] Preparing patient: BraTS20_Training_073
+
+[19/74] Preparing patient: BraTS20_Training_074
+
+[20/74] Preparing patient: BraTS20_Training_077
+
+[21/74] Preparing patient: BraTS20_Training_078
+
+[22/74] Preparing patient: BraTS20_Training_079
+
+[23/74] Preparing patient: BraTS20_Training_083
+
+[24/74] Preparing patient: BraTS20_Training_091
+
+[25/74] Preparing patient: BraTS20_Training_094
+
+[26/74] Preparing patient: BraTS20_Training_095
+
+[27/74] Preparing patient: BraTS20_Training_102
+
+[28/74] Preparing patient: BraTS20_Training_109
+
+[29/74] Preparing patient: BraTS20_Training_110
+
+[30/74] Preparing patient: BraTS20_Training_115
+
+[31/74] Preparing patient: BraTS20_Training_120
+
+[32/74] Preparing patient: BraTS20_Training_125
+
+[33/74] Preparing patient: BraTS20_Training_127
+
+[34/74] Preparing patient: BraTS20_Training_138
+
+[35/74] Preparing patient: BraTS20_Training_153
+
+[36/74] Preparing patient: BraTS20_Training_154
+
+[37/74] Preparing patient: BraTS20_Training_156
+
+[38/74] Preparing patient: BraTS20_Training_166
+
+[39/74] Preparing patient: BraTS20_Training_176
+
+[40/74] Preparing patient: BraTS20_Training_178
+
+[41/74] Preparing patient: BraTS20_Training_194
+
+[42/74] Preparing patient: BraTS20_Training_197
+
+[43/74] Preparing patient: BraTS20_Training_203
+
+[44/74] Preparing patient: BraTS20_Training_204
+
+[45/74] Preparing patient: BraTS20_Training_209
+
+[46/74] Preparing patient: BraTS20_Training_220
+
+[47/74] Preparing patient: BraTS20_Training_226
+
+[48/74] Preparing patient: BraTS20_Training_228
+
+[49/74] Preparing patient: BraTS20_Training_230
+
+[50/74] Preparing patient: BraTS20_Training_232
+
+[51/74] Preparing patient: BraTS20_Training_233
+
+[52/74] Preparing patient: BraTS20_Training_238
+
+[53/74] Preparing patient: BraTS20_Training_239
+
+[54/74] Preparing patient: BraTS20_Training_245
+
+[55/74] Preparing patient: BraTS20_Training_247
+
+[56/74] Preparing patient: BraTS20_Training_251
+
+[57/74] Preparing patient: BraTS20_Training_256
+
+[58/74] Preparing patient: BraTS20_Training_259
+
+[59/74] Preparing patient: BraTS20_Training_272
+
+[60/74] Preparing patient: BraTS20_Training_286
+
+[61/74] Preparing patient: BraTS20_Training_292
+
+[62/74] Preparing patient: BraTS20_Training_297
+
+[63/74] Preparing patient: BraTS20_Training_301
+
+[64/74] Preparing patient: BraTS20_Training_305
+
+[65/74] Preparing patient: BraTS20_Training_310
+
+[66/74] Preparing patient: BraTS20_Training_313
+
+[67/74] Preparing patient: BraTS20_Training_326
+
+[68/74] Preparing patient: BraTS20_Training_333
+
+[69/74] Preparing patient: BraTS20_Training_341
+
+[70/74] Preparing patient: BraTS20_Training_342
+
+[71/74] Preparing patient: BraTS20_Training_346
+
+[72/74] Preparing patient: BraTS20_Training_348
+
+[73/74] Preparing patient: BraTS20_Training_357
+
+[74/74] Preparing patient: BraTS20_Training_366
+
+================================================================================
+Script 29A: Full 74-patient extended nnU-Net input preparation summary
+================================================================================
+Output root: /home/xfh25/brats_segmentation_project/nnunet/temporary_degraded_tests/extended_full_selected
+Patients: 74
+Conditions: 15
+Modalities per patient: 4
+Total images written: 4440
+Expected images: 4440
+Labels written: 74
+Expected labels: 74
+
+Conditions prepared:
+- noise_L6: {'artifact': 'noise', 'level': 6, 'std': 0.15}
+- noise_L7: {'artifact': 'noise', 'level': 7, 'std': 0.2}
+- noise_L8: {'artifact': 'noise', 'level': 8, 'std': 0.3}
+- noise_L9: {'artifact': 'noise', 'level': 9, 'std': 0.4}
+- noise_L10: {'artifact': 'noise', 'level': 10, 'std': 0.5}
+- contrast_L6: {'artifact': 'contrast', 'level': 6, 'factor': 0.2}
+- contrast_L7: {'artifact': 'contrast', 'level': 7, 'factor': 0.15}
+- contrast_L8: {'artifact': 'contrast', 'level': 8, 'factor': 0.1}
+- contrast_L9: {'artifact': 'contrast', 'level': 9, 'factor': 0.05}
+- contrast_L10: {'artifact': 'contrast', 'level': 10, 'factor': 0.02}
+- ringing_L6: {'artifact': 'ringing', 'level': 6, 'keep_fraction': 0.35}
+- ringing_L7: {'artifact': 'ringing', 'level': 7, 'keep_fraction': 0.25}
+- ringing_L8: {'artifact': 'ringing', 'level': 8, 'keep_fraction': 0.15}
+- ringing_L9: {'artifact': 'ringing', 'level': 9, 'keep_fraction': 0.1}
+- ringing_L10: {'artifact': 'ringing', 'level': 10, 'keep_fraction': 0.05}
+
+Important reporting note:
+The ringing condition uses Fourier truncation. In the report, describe it as frequency-domain ringing-like degradation or Fourier truncation / low-pass frequency stress test, not pure classic Gibbs ringing.
+================================================================================

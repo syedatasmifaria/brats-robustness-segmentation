@@ -1,0 +1,37 @@
+================================================================================
+Script 29C: Full 74-patient extended selected nnU-Net drop summary
+================================================================================
+
+Drop formula:
+Drop = clean same-test baseline metric - degraded metric
+
+Clean full 74-patient baseline:
+WT Dice: 0.912460
+WT IoU:  0.846193
+TC Dice: 0.884438
+TC IoU:  0.808667
+ET Dice: 0.818585
+ET IoU:  0.728300
+
+Extended full-cohort results:
+contrast_L6: WT Dice 0.918692, WT Dice drop -0.006232, WT IoU 0.855408, WT IoU drop -0.009216, Pred WT voxels 95733.6
+contrast_L7: WT Dice 0.918928, WT Dice drop -0.006468, WT IoU 0.855782, WT IoU drop -0.009589, Pred WT voxels 95699.9
+contrast_L8: WT Dice 0.919008, WT Dice drop -0.006548, WT IoU 0.855883, WT IoU drop -0.009691, Pred WT voxels 95616.9
+contrast_L9: WT Dice 0.917403, WT Dice drop -0.004942, WT IoU 0.853120, WT IoU drop -0.006927, Pred WT voxels 95355.6
+contrast_L10: WT Dice 0.912500, WT Dice drop -0.000040, WT IoU 0.845566, WT IoU drop 0.000627, Pred WT voxels 94722.3
+noise_L6: WT Dice 0.908456, WT Dice drop 0.004004, WT IoU 0.838718, WT IoU drop 0.007474, Pred WT voxels 93631.3
+noise_L7: WT Dice 0.901037, WT Dice drop 0.011423, WT IoU 0.827281, WT IoU drop 0.018911, Pred WT voxels 91892.2
+noise_L8: WT Dice 0.884600, WT Dice drop 0.027860, WT IoU 0.802292, WT IoU drop 0.043900, Pred WT voxels 88333.2
+noise_L9: WT Dice 0.863852, WT Dice drop 0.048608, WT IoU 0.771625, WT IoU drop 0.074567, Pred WT voxels 84585.1
+noise_L10: WT Dice 0.836280, WT Dice drop 0.076180, WT IoU 0.734571, WT IoU drop 0.111621, Pred WT voxels 80381.1
+ringing_L6: WT Dice 0.913118, WT Dice drop -0.000658, WT IoU 0.846506, WT IoU drop -0.000313, Pred WT voxels 94748.1
+ringing_L7: WT Dice 0.907876, WT Dice drop 0.004584, WT IoU 0.837337, WT IoU drop 0.008856, Pred WT voxels 95783.9
+ringing_L8: WT Dice 0.880033, WT Dice drop 0.032428, WT IoU 0.792344, WT IoU drop 0.053849, Pred WT voxels 102535.7
+ringing_L9: WT Dice 0.825955, WT Dice drop 0.086505, WT IoU 0.716042, WT IoU drop 0.130151, Pred WT voxels 111596.2
+ringing_L10: WT Dice 0.624263, WT Dice drop 0.288197, WT IoU 0.487364, WT IoU drop 0.358828, Pred WT voxels 169170.3
+
+Breaking threshold used for interpretation:
+- WT Dice drop >= 0.10 or WT IoU drop >= 0.15
+
+Important reporting note:
+The ringing condition uses Fourier truncation and should be described as frequency-domain ringing-like degradation or Fourier truncation / low-pass frequency stress test, not pure classic Gibbs ringing.

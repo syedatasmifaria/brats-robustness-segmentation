@@ -1,0 +1,28 @@
+================================================================================
+Script 28F: nnU-Net Gibbs-like ringing pilot drop summary
+================================================================================
+
+Drop formula:
+Drop = clean pilot metric - degraded pilot metric
+
+Clean pilot baseline, same 5 patients:
+WT Dice: 0.886883
+WT IoU:  0.807834
+TC Dice: 0.903499
+TC IoU:  0.827023
+ET Dice: 0.827837
+ET IoU:  0.717388
+
+Gibbs ringing pilot results:
+gibbs_L1: WT Dice 0.893056, WT Dice drop -0.006173, WT IoU 0.815772, WT IoU drop -0.007938, Pred WT voxels 116339.6
+gibbs_L2: WT Dice 0.890581, WT Dice drop -0.003698, WT IoU 0.812508, WT IoU drop -0.004675, Pred WT voxels 116426.2
+gibbs_L3: WT Dice 0.888201, WT Dice drop -0.001318, WT IoU 0.809208, WT IoU drop -0.001374, Pred WT voxels 116669.6
+gibbs_L4: WT Dice 0.885174, WT Dice drop 0.001710, WT IoU 0.804852, WT IoU drop 0.002982, Pred WT voxels 117171.2
+gibbs_L5: WT Dice 0.881512, WT Dice drop 0.005371, WT IoU 0.799463, WT IoU drop 0.008370, Pred WT voxels 118065.8
+
+Interpretation guide:
+- This is a 5-patient pilot only.
+- Positive drop means degraded performance is worse than clean.
+- Negative tiny drops should not be interpreted as true improvement.
+- If WT Dice drop approaches or exceeds 0.10, the artifact is causing a substantial robustness failure.
+- If WT IoU drop approaches or exceeds 0.15, the artifact is causing a substantial robustness failure.

@@ -1,0 +1,255 @@
+================================================================================
+Script 28E: Run nnU-Net predictions for Gibbs ringing pilot
+================================================================================
+
+--------------------------------------------------------------------------------
+Predicting: gibbs_L1
+Input:      /home/xfh25/brats_segmentation_project/nnunet/temporary_degraded_tests/gibbs_ringing_pilot/gibbs_L1/imagesTs
+Output:     /home/xfh25/brats_segmentation_project/nnunet/temporary_degraded_tests/gibbs_ringing_pilot/gibbs_L1/predictions
+--------------------------------------------------------------------------------
+
+#######################################################################
+Please cite the following paper when using nnU-Net:
+Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+#######################################################################
+
+There are 5 cases in the source folder
+I am process 0 out of 1 (max process ID is 0, we start counting with 0!)
+There are 5 cases that I would like to predict
+
+Predicting BRATS_001:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:06,  1.03it/s] 25%|██▌       | 2/8 [00:01<00:02,  2.07it/s] 38%|███▊      | 3/8 [00:01<00:01,  2.57it/s] 50%|█████     | 4/8 [00:01<00:01,  2.90it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.12it/s] 75%|███████▌  | 6/8 [00:02<00:00,  3.27it/s] 88%|████████▊ | 7/8 [00:02<00:00,  3.37it/s]100%|██████████| 8/8 [00:02<00:00,  3.44it/s]100%|██████████| 8/8 [00:02<00:00,  2.88it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_001
+
+Predicting BRATS_004:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:00,  7.11it/s] 25%|██▌       | 2/8 [00:00<00:01,  4.51it/s] 38%|███▊      | 3/8 [00:00<00:01,  4.04it/s] 50%|█████     | 4/8 [00:00<00:01,  3.86it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.76it/s] 75%|███████▌  | 6/8 [00:01<00:00,  3.70it/s] 88%|████████▊ | 7/8 [00:01<00:00,  3.67it/s]100%|██████████| 8/8 [00:02<00:00,  3.64it/s]100%|██████████| 8/8 [00:02<00:00,  3.83it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_004
+
+Predicting BRATS_006:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:00,  7.09it/s] 25%|██▌       | 2/8 [00:00<00:01,  4.52it/s] 38%|███▊      | 3/8 [00:00<00:01,  4.04it/s] 50%|█████     | 4/8 [00:00<00:01,  3.84it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.74it/s] 75%|███████▌  | 6/8 [00:01<00:00,  3.69it/s] 88%|████████▊ | 7/8 [00:01<00:00,  3.66it/s]100%|██████████| 8/8 [00:02<00:00,  3.63it/s]100%|██████████| 8/8 [00:02<00:00,  3.82it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_006
+
+Predicting BRATS_010:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:00,  7.07it/s] 25%|██▌       | 2/8 [00:00<00:01,  4.51it/s] 38%|███▊      | 3/8 [00:00<00:01,  4.04it/s] 50%|█████     | 4/8 [00:00<00:01,  3.84it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.75it/s] 75%|███████▌  | 6/8 [00:01<00:00,  3.70it/s] 88%|████████▊ | 7/8 [00:01<00:00,  3.67it/s]100%|██████████| 8/8 [00:02<00:00,  3.65it/s]100%|██████████| 8/8 [00:02<00:00,  3.83it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_010
+
+Predicting BRATS_016:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:00,  7.14it/s] 25%|██▌       | 2/8 [00:00<00:01,  4.53it/s] 38%|███▊      | 3/8 [00:00<00:01,  4.05it/s] 50%|█████     | 4/8 [00:00<00:01,  3.86it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.76it/s] 75%|███████▌  | 6/8 [00:01<00:00,  3.71it/s] 88%|████████▊ | 7/8 [00:01<00:00,  3.67it/s]100%|██████████| 8/8 [00:02<00:00,  3.65it/s]100%|██████████| 8/8 [00:02<00:00,  3.84it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_016
+GPU prediction completed. Waiting for remaining segmentation exports to finish...
+Collecting results:   0%|          | 0/5 [00:00<?, ?it/s]Collecting results: 100%|██████████| 5/5 [00:00<00:00, 116.65it/s]
+Segmentation export complete.
+Prediction count for gibbs_L1: 5
+
+--------------------------------------------------------------------------------
+Predicting: gibbs_L2
+Input:      /home/xfh25/brats_segmentation_project/nnunet/temporary_degraded_tests/gibbs_ringing_pilot/gibbs_L2/imagesTs
+Output:     /home/xfh25/brats_segmentation_project/nnunet/temporary_degraded_tests/gibbs_ringing_pilot/gibbs_L2/predictions
+--------------------------------------------------------------------------------
+
+#######################################################################
+Please cite the following paper when using nnU-Net:
+Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+#######################################################################
+
+There are 5 cases in the source folder
+I am process 0 out of 1 (max process ID is 0, we start counting with 0!)
+There are 5 cases that I would like to predict
+
+Predicting BRATS_001:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:06,  1.03it/s] 25%|██▌       | 2/8 [00:01<00:02,  2.07it/s] 38%|███▊      | 3/8 [00:01<00:01,  2.57it/s] 50%|█████     | 4/8 [00:01<00:01,  2.90it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.12it/s] 75%|███████▌  | 6/8 [00:02<00:00,  3.27it/s] 88%|████████▊ | 7/8 [00:02<00:00,  3.37it/s]100%|██████████| 8/8 [00:02<00:00,  3.44it/s]100%|██████████| 8/8 [00:02<00:00,  2.88it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_001
+
+Predicting BRATS_004:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:00,  7.08it/s] 25%|██▌       | 2/8 [00:00<00:01,  4.52it/s] 38%|███▊      | 3/8 [00:00<00:01,  4.04it/s] 50%|█████     | 4/8 [00:00<00:01,  3.85it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.75it/s] 75%|███████▌  | 6/8 [00:01<00:00,  3.70it/s] 88%|████████▊ | 7/8 [00:01<00:00,  3.66it/s]100%|██████████| 8/8 [00:02<00:00,  3.64it/s]100%|██████████| 8/8 [00:02<00:00,  3.83it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_004
+
+Predicting BRATS_006:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:00,  7.11it/s] 25%|██▌       | 2/8 [00:00<00:01,  4.52it/s] 38%|███▊      | 3/8 [00:00<00:01,  4.05it/s] 50%|█████     | 4/8 [00:00<00:01,  3.85it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.76it/s] 75%|███████▌  | 6/8 [00:01<00:00,  3.70it/s] 88%|████████▊ | 7/8 [00:01<00:00,  3.67it/s]100%|██████████| 8/8 [00:02<00:00,  3.64it/s]100%|██████████| 8/8 [00:02<00:00,  3.83it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_006
+
+Predicting BRATS_010:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:00,  7.11it/s] 25%|██▌       | 2/8 [00:00<00:01,  4.52it/s] 38%|███▊      | 3/8 [00:00<00:01,  4.04it/s] 50%|█████     | 4/8 [00:00<00:01,  3.85it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.75it/s] 75%|███████▌  | 6/8 [00:01<00:00,  3.70it/s] 88%|████████▊ | 7/8 [00:01<00:00,  3.66it/s]100%|██████████| 8/8 [00:02<00:00,  3.64it/s]100%|██████████| 8/8 [00:02<00:00,  3.83it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_010
+
+Predicting BRATS_016:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:00,  7.06it/s] 25%|██▌       | 2/8 [00:00<00:01,  4.50it/s] 38%|███▊      | 3/8 [00:00<00:01,  4.04it/s] 50%|█████     | 4/8 [00:00<00:01,  3.84it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.75it/s] 75%|███████▌  | 6/8 [00:01<00:00,  3.69it/s] 88%|████████▊ | 7/8 [00:01<00:00,  3.65it/s]100%|██████████| 8/8 [00:02<00:00,  3.63it/s]100%|██████████| 8/8 [00:02<00:00,  3.82it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_016
+GPU prediction completed. Waiting for remaining segmentation exports to finish...
+Collecting results:   0%|          | 0/5 [00:00<?, ?it/s]Collecting results: 100%|██████████| 5/5 [00:00<00:00, 104.06it/s]
+Segmentation export complete.
+Prediction count for gibbs_L2: 5
+
+--------------------------------------------------------------------------------
+Predicting: gibbs_L3
+Input:      /home/xfh25/brats_segmentation_project/nnunet/temporary_degraded_tests/gibbs_ringing_pilot/gibbs_L3/imagesTs
+Output:     /home/xfh25/brats_segmentation_project/nnunet/temporary_degraded_tests/gibbs_ringing_pilot/gibbs_L3/predictions
+--------------------------------------------------------------------------------
+
+#######################################################################
+Please cite the following paper when using nnU-Net:
+Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+#######################################################################
+
+There are 5 cases in the source folder
+I am process 0 out of 1 (max process ID is 0, we start counting with 0!)
+There are 5 cases that I would like to predict
+
+Predicting BRATS_001:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:06,  1.02it/s] 25%|██▌       | 2/8 [00:01<00:02,  2.04it/s] 38%|███▊      | 3/8 [00:01<00:01,  2.54it/s] 50%|█████     | 4/8 [00:01<00:01,  2.87it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.09it/s] 75%|███████▌  | 6/8 [00:02<00:00,  3.24it/s] 88%|████████▊ | 7/8 [00:02<00:00,  3.35it/s]100%|██████████| 8/8 [00:02<00:00,  3.42it/s]100%|██████████| 8/8 [00:02<00:00,  2.86it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_001
+
+Predicting BRATS_004:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  6.75it/s] 25%|██▌       | 2/8 [00:00<00:01,  4.44it/s] 38%|███▊      | 3/8 [00:00<00:01,  4.00it/s] 50%|█████     | 4/8 [00:00<00:01,  3.82it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.73it/s] 75%|███████▌  | 6/8 [00:01<00:00,  3.67it/s] 88%|████████▊ | 7/8 [00:01<00:00,  3.64it/s]100%|██████████| 8/8 [00:02<00:00,  3.62it/s]100%|██████████| 8/8 [00:02<00:00,  3.80it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_004
+
+Predicting BRATS_006:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  6.75it/s] 25%|██▌       | 2/8 [00:00<00:01,  4.44it/s] 38%|███▊      | 3/8 [00:00<00:01,  4.00it/s] 50%|█████     | 4/8 [00:00<00:01,  3.81it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.72it/s] 75%|███████▌  | 6/8 [00:01<00:00,  3.67it/s] 88%|████████▊ | 7/8 [00:01<00:00,  3.64it/s]100%|██████████| 8/8 [00:02<00:00,  3.62it/s]100%|██████████| 8/8 [00:02<00:00,  3.80it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_006
+
+Predicting BRATS_010:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  6.75it/s] 25%|██▌       | 2/8 [00:00<00:01,  4.43it/s] 38%|███▊      | 3/8 [00:00<00:01,  3.99it/s] 50%|█████     | 4/8 [00:00<00:01,  3.81it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.71it/s] 75%|███████▌  | 6/8 [00:01<00:00,  3.66it/s] 88%|████████▊ | 7/8 [00:01<00:00,  3.63it/s]100%|██████████| 8/8 [00:02<00:00,  3.61it/s]100%|██████████| 8/8 [00:02<00:00,  3.78it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_010
+
+Predicting BRATS_016:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  6.75it/s] 25%|██▌       | 2/8 [00:00<00:01,  4.41it/s] 38%|███▊      | 3/8 [00:00<00:01,  3.97it/s] 50%|█████     | 4/8 [00:00<00:01,  3.80it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.70it/s] 75%|███████▌  | 6/8 [00:01<00:00,  3.65it/s] 88%|████████▊ | 7/8 [00:01<00:00,  3.62it/s]100%|██████████| 8/8 [00:02<00:00,  3.60it/s]100%|██████████| 8/8 [00:02<00:00,  3.78it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_016
+GPU prediction completed. Waiting for remaining segmentation exports to finish...
+Collecting results:   0%|          | 0/5 [00:00<?, ?it/s]Collecting results: 100%|██████████| 5/5 [00:00<00:00, 106.34it/s]
+Segmentation export complete.
+Prediction count for gibbs_L3: 5
+
+--------------------------------------------------------------------------------
+Predicting: gibbs_L4
+Input:      /home/xfh25/brats_segmentation_project/nnunet/temporary_degraded_tests/gibbs_ringing_pilot/gibbs_L4/imagesTs
+Output:     /home/xfh25/brats_segmentation_project/nnunet/temporary_degraded_tests/gibbs_ringing_pilot/gibbs_L4/predictions
+--------------------------------------------------------------------------------
+
+#######################################################################
+Please cite the following paper when using nnU-Net:
+Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+#######################################################################
+
+There are 5 cases in the source folder
+I am process 0 out of 1 (max process ID is 0, we start counting with 0!)
+There are 5 cases that I would like to predict
+
+Predicting BRATS_001:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:06,  1.02it/s] 25%|██▌       | 2/8 [00:01<00:02,  2.04it/s] 38%|███▊      | 3/8 [00:01<00:01,  2.54it/s] 50%|█████     | 4/8 [00:01<00:01,  2.86it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.08it/s] 75%|███████▌  | 6/8 [00:02<00:00,  3.22it/s] 88%|████████▊ | 7/8 [00:02<00:00,  3.33it/s]100%|██████████| 8/8 [00:02<00:00,  3.40it/s]100%|██████████| 8/8 [00:02<00:00,  2.84it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_001
+
+Predicting BRATS_004:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:00,  7.05it/s] 25%|██▌       | 2/8 [00:00<00:01,  4.46it/s] 38%|███▊      | 3/8 [00:00<00:01,  3.99it/s] 50%|█████     | 4/8 [00:00<00:01,  3.81it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.71it/s] 75%|███████▌  | 6/8 [00:01<00:00,  3.65it/s] 88%|████████▊ | 7/8 [00:01<00:00,  3.62it/s]100%|██████████| 8/8 [00:02<00:00,  3.59it/s]100%|██████████| 8/8 [00:02<00:00,  3.78it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_004
+
+Predicting BRATS_006:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:00,  7.04it/s] 25%|██▌       | 2/8 [00:00<00:01,  4.47it/s] 38%|███▊      | 3/8 [00:00<00:01,  3.99it/s] 50%|█████     | 4/8 [00:00<00:01,  3.80it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.70it/s] 75%|███████▌  | 6/8 [00:01<00:00,  3.65it/s] 88%|████████▊ | 7/8 [00:01<00:00,  3.61it/s]100%|██████████| 8/8 [00:02<00:00,  3.59it/s]100%|██████████| 8/8 [00:02<00:00,  3.78it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_006
+
+Predicting BRATS_010:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:00,  7.04it/s] 25%|██▌       | 2/8 [00:00<00:01,  4.46it/s] 38%|███▊      | 3/8 [00:00<00:01,  3.98it/s] 50%|█████     | 4/8 [00:00<00:01,  3.80it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.70it/s] 75%|███████▌  | 6/8 [00:01<00:00,  3.64it/s] 88%|████████▊ | 7/8 [00:01<00:00,  3.61it/s]100%|██████████| 8/8 [00:02<00:00,  3.58it/s]100%|██████████| 8/8 [00:02<00:00,  3.77it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_010
+
+Predicting BRATS_016:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:00,  7.02it/s] 25%|██▌       | 2/8 [00:00<00:01,  4.44it/s] 38%|███▊      | 3/8 [00:00<00:01,  3.97it/s] 50%|█████     | 4/8 [00:00<00:01,  3.79it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.69it/s] 75%|███████▌  | 6/8 [00:01<00:00,  3.63it/s] 88%|████████▊ | 7/8 [00:01<00:00,  3.60it/s]100%|██████████| 8/8 [00:02<00:00,  3.58it/s]100%|██████████| 8/8 [00:02<00:00,  3.76it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_016
+GPU prediction completed. Waiting for remaining segmentation exports to finish...
+Collecting results:   0%|          | 0/5 [00:00<?, ?it/s]Collecting results: 100%|██████████| 5/5 [00:00<00:00, 104.81it/s]
+Segmentation export complete.
+Prediction count for gibbs_L4: 5
+
+--------------------------------------------------------------------------------
+Predicting: gibbs_L5
+Input:      /home/xfh25/brats_segmentation_project/nnunet/temporary_degraded_tests/gibbs_ringing_pilot/gibbs_L5/imagesTs
+Output:     /home/xfh25/brats_segmentation_project/nnunet/temporary_degraded_tests/gibbs_ringing_pilot/gibbs_L5/predictions
+--------------------------------------------------------------------------------
+
+#######################################################################
+Please cite the following paper when using nnU-Net:
+Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+#######################################################################
+
+There are 5 cases in the source folder
+I am process 0 out of 1 (max process ID is 0, we start counting with 0!)
+There are 5 cases that I would like to predict
+
+Predicting BRATS_001:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:06,  1.01it/s] 25%|██▌       | 2/8 [00:01<00:02,  2.04it/s] 38%|███▊      | 3/8 [00:01<00:01,  2.53it/s] 50%|█████     | 4/8 [00:01<00:01,  2.85it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.07it/s] 75%|███████▌  | 6/8 [00:02<00:00,  3.21it/s] 88%|████████▊ | 7/8 [00:02<00:00,  3.31it/s]100%|██████████| 8/8 [00:02<00:00,  3.38it/s]100%|██████████| 8/8 [00:02<00:00,  2.83it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_001
+
+Predicting BRATS_004:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:00,  7.04it/s] 25%|██▌       | 2/8 [00:00<00:01,  4.46it/s] 38%|███▊      | 3/8 [00:00<00:01,  3.99it/s] 50%|█████     | 4/8 [00:00<00:01,  3.80it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.70it/s] 75%|███████▌  | 6/8 [00:01<00:00,  3.65it/s] 88%|████████▊ | 7/8 [00:01<00:00,  3.61it/s]100%|██████████| 8/8 [00:02<00:00,  3.59it/s]100%|██████████| 8/8 [00:02<00:00,  3.78it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_004
+
+Predicting BRATS_006:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:00,  7.03it/s] 25%|██▌       | 2/8 [00:00<00:01,  4.46it/s] 38%|███▊      | 3/8 [00:00<00:01,  3.99it/s] 50%|█████     | 4/8 [00:00<00:01,  3.79it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.70it/s] 75%|███████▌  | 6/8 [00:01<00:00,  3.64it/s] 88%|████████▊ | 7/8 [00:01<00:00,  3.61it/s]100%|██████████| 8/8 [00:02<00:00,  3.59it/s]100%|██████████| 8/8 [00:02<00:00,  3.78it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_006
+
+Predicting BRATS_010:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:00,  7.01it/s] 25%|██▌       | 2/8 [00:00<00:01,  4.46it/s] 38%|███▊      | 3/8 [00:00<00:01,  3.98it/s] 50%|█████     | 4/8 [00:00<00:01,  3.79it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.69it/s] 75%|███████▌  | 6/8 [00:01<00:00,  3.64it/s] 88%|████████▊ | 7/8 [00:01<00:00,  3.60it/s]100%|██████████| 8/8 [00:02<00:00,  3.58it/s]100%|██████████| 8/8 [00:02<00:00,  3.77it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_010
+
+Predicting BRATS_016:
+perform_everything_on_device: True
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  6.98it/s] 25%|██▌       | 2/8 [00:00<00:01,  4.43it/s] 38%|███▊      | 3/8 [00:00<00:01,  3.97it/s] 50%|█████     | 4/8 [00:00<00:01,  3.78it/s] 62%|██████▎   | 5/8 [00:01<00:00,  3.69it/s] 75%|███████▌  | 6/8 [00:01<00:00,  3.63it/s] 88%|████████▊ | 7/8 [00:01<00:00,  3.60it/s]100%|██████████| 8/8 [00:02<00:00,  3.57it/s]100%|██████████| 8/8 [00:02<00:00,  3.76it/s]
+sending off prediction to background worker for resampling and export
+done with BRATS_016
+GPU prediction completed. Waiting for remaining segmentation exports to finish...
+Collecting results:   0%|          | 0/5 [00:00<?, ?it/s]Collecting results: 100%|██████████| 5/5 [00:00<00:00, 99.33it/s]
+Segmentation export complete.
+Prediction count for gibbs_L5: 5
+
+================================================================================
+Gibbs ringing pilot prediction complete.
+Expected total predictions: 5 levels × 5 patients = 25
+Actual total predictions:
+25
+================================================================================

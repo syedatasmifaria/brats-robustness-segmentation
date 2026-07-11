@@ -1,0 +1,19 @@
+================================================================================
+Script 28B: Gibbs-like ringing pilot PSNR/MSE summary
+================================================================================
+Patient: BraTS20_Training_001
+Modality: FLAIR
+Comparison: clean vs gibbs_L1 to gibbs_L5
+Metric scope: brain voxels only
+Normalization: [0,1], so PSNR data_range = 1.0
+
+gibbs_L1: MSE = 0.000137, PSNR = 38.65 dB, strength = 0.045, wavelength = 7.0
+gibbs_L2: MSE = 0.000387, PSNR = 34.12 dB, strength = 0.075, wavelength = 6.5
+gibbs_L3: MSE = 0.000846, PSNR = 30.72 dB, strength = 0.110, wavelength = 6.0
+gibbs_L4: MSE = 0.001698, PSNR = 27.70 dB, strength = 0.155, wavelength = 5.5
+gibbs_L5: MSE = 0.003121, PSNR = 25.06 dB, strength = 0.210, wavelength = 5.0
+
+Interpretation guide:
+- Higher MSE means stronger image-level change.
+- Lower PSNR means stronger image-level change.
+- A sensible pilot should show MSE increasing and PSNR decreasing from L1 to L5.
