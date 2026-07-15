@@ -1,0 +1,61 @@
+========================================================================================
+Script 30A: Full-cohort nnU-Net degradation MSE/PSNR summary
+========================================================================================
+
+Patients: 74
+Modalities per patient: 4
+Conditions: 40
+Detailed measurements: 11840
+
+Interpretation:
+Higher MSE indicates greater image-level change.
+Lower PSNR indicates greater image-level change.
+Metrics were calculated inside the clean brain mask.
+
+Intensity-handling note:
+Original L1-L5 degraded images were normalized using their corresponding clean MRI ranges.
+Extended L6-L10 degraded images were already stored in [0,1] and were not normalized a second time.
+
+Terminology note:
+The stored artifact name 'ringing' refers to frequency-domain truncation and should not be described as pure classic Gibbs ringing.
+
+blur_L1: MSE mean=0.000557, MSE SD=0.000250, PSNR mean=33.02 dB, PSNR SD=2.14, patients=74, measurements=296
+blur_L2: MSE mean=0.003611, MSE SD=0.001475, PSNR mean=24.83 dB, PSNR SD=1.99, patients=74, measurements=296
+blur_L3: MSE mean=0.006403, MSE SD=0.002387, PSNR mean=22.28 dB, PSNR SD=1.85, patients=74, measurements=296
+blur_L4: MSE mean=0.008989, MSE SD=0.003168, PSNR mean=20.78 dB, PSNR SD=1.76, patients=74, measurements=296
+blur_L5: MSE mean=0.011340, MSE SD=0.003869, PSNR mean=19.75 dB, PSNR SD=1.70, patients=74, measurements=296
+ghosting_L1: MSE mean=0.001373, MSE SD=0.000499, PSNR mean=28.92 dB, PSNR SD=1.61, patients=74, measurements=296
+ghosting_L2: MSE mean=0.003997, MSE SD=0.001445, PSNR mean=24.27 dB, PSNR SD=1.60, patients=74, measurements=296
+ghosting_L3: MSE mean=0.007948, MSE SD=0.002872, PSNR mean=21.29 dB, PSNR SD=1.60, patients=74, measurements=296
+ghosting_L4: MSE mean=0.013323, MSE SD=0.004818, PSNR mean=19.04 dB, PSNR SD=1.61, patients=74, measurements=296
+ghosting_L5: MSE mean=0.020197, MSE SD=0.007326, PSNR mean=17.24 dB, PSNR SD=1.61, patients=74, measurements=296
+noise_L1: MSE mean=0.000394, MSE SD=0.000001, PSNR mean=34.04 dB, PSNR SD=0.01, patients=74, measurements=296
+noise_L2: MSE mean=0.001567, MSE SD=0.000011, PSNR mean=28.05 dB, PSNR SD=0.03, patients=74, measurements=296
+noise_L3: MSE mean=0.003493, MSE SD=0.000051, PSNR mean=24.57 dB, PSNR SD=0.06, patients=74, measurements=296
+noise_L4: MSE mean=0.006135, MSE SD=0.000143, PSNR mean=22.12 dB, PSNR SD=0.10, patients=74, measurements=296
+noise_L5: MSE mean=0.009449, MSE SD=0.000306, PSNR mean=20.25 dB, PSNR SD=0.14, patients=74, measurements=296
+noise_L6: MSE mean=0.020291, MSE SD=0.001073, PSNR mean=16.93 dB, PSNR SD=0.24, patients=74, measurements=296
+noise_L7: MSE mean=0.033927, MSE SD=0.002186, PSNR mean=14.70 dB, PSNR SD=0.29, patients=74, measurements=296
+noise_L8: MSE mean=0.065198, MSE SD=0.003910, PSNR mean=11.87 dB, PSNR SD=0.27, patients=74, measurements=296
+noise_L9: MSE mean=0.095994, MSE SD=0.003733, PSNR mean=10.18 dB, PSNR SD=0.17, patients=74, measurements=296
+noise_L10: MSE mean=0.122841, MSE SD=0.002253, PSNR mean=9.11 dB, PSNR SD=0.08, patients=74, measurements=296
+contrast_L1: MSE mean=0.000566, MSE SD=0.000228, PSNR mean=32.82 dB, PSNR SD=1.75, patients=74, measurements=296
+contrast_L2: MSE mean=0.003538, MSE SD=0.001424, PSNR mean=24.86 dB, PSNR SD=1.75, patients=74, measurements=296
+contrast_L3: MSE mean=0.009058, MSE SD=0.003644, PSNR mean=20.78 dB, PSNR SD=1.75, patients=74, measurements=296
+contrast_L4: MSE mean=0.017125, MSE SD=0.006890, PSNR mean=18.01 dB, PSNR SD=1.75, patients=74, measurements=296
+contrast_L5: MSE mean=0.027739, MSE SD=0.011161, PSNR mean=15.91 dB, PSNR SD=1.75, patients=74, measurements=296
+contrast_L6: MSE mean=0.023158, MSE SD=0.006803, PSNR mean=16.54 dB, PSNR SD=1.30, patients=74, measurements=296
+contrast_L7: MSE mean=0.026144, MSE SD=0.007680, PSNR mean=16.02 dB, PSNR SD=1.30, patients=74, measurements=296
+contrast_L8: MSE mean=0.029310, MSE SD=0.008610, PSNR mean=15.52 dB, PSNR SD=1.30, patients=74, measurements=296
+contrast_L9: MSE mean=0.032657, MSE SD=0.009594, PSNR mean=15.05 dB, PSNR SD=1.30, patients=74, measurements=296
+contrast_L10: MSE mean=0.034752, MSE SD=0.010209, PSNR mean=14.78 dB, PSNR SD=1.30, patients=74, measurements=296
+ringing_L1: MSE mean=0.000342, MSE SD=0.000178, PSNR mean=35.29 dB, PSNR SD=2.48, patients=74, measurements=296
+ringing_L2: MSE mean=0.000642, MSE SD=0.000333, PSNR mean=32.53 dB, PSNR SD=2.41, patients=74, measurements=296
+ringing_L3: MSE mean=0.001058, MSE SD=0.000532, PSNR mean=30.32 dB, PSNR SD=2.31, patients=74, measurements=296
+ringing_L4: MSE mean=0.001644, MSE SD=0.000792, PSNR mean=28.36 dB, PSNR SD=2.23, patients=74, measurements=296
+ringing_L5: MSE mean=0.002513, MSE SD=0.001152, PSNR mean=26.48 dB, PSNR SD=2.14, patients=74, measurements=296
+ringing_L6: MSE mean=0.003816, MSE SD=0.001644, PSNR mean=24.62 dB, PSNR SD=2.04, patients=74, measurements=296
+ringing_L7: MSE mean=0.006203, MSE SD=0.002419, PSNR mean=22.44 dB, PSNR SD=1.90, patients=74, measurements=296
+ringing_L8: MSE mean=0.011446, MSE SD=0.004017, PSNR mean=19.73 dB, PSNR SD=1.76, patients=74, measurements=296
+ringing_L9: MSE mean=0.016442, MSE SD=0.005503, PSNR mean=18.12 dB, PSNR SD=1.64, patients=74, measurements=296
+ringing_L10: MSE mean=0.027633, MSE SD=0.008629, PSNR mean=15.82 dB, PSNR SD=1.47, patients=74, measurements=296

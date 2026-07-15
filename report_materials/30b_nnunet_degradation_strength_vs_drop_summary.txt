@@ -1,0 +1,68 @@
+========================================================================================
+Script 30B: nnU-Net degradation strength versus performance-drop summary
+========================================================================================
+
+Conditions analyzed: 40
+Original artifacts L1-L5: blur, ghosting, noise, contrast, ringing/frequency-domain truncation
+Extended artifacts L6-L10: noise, contrast, ringing/frequency-domain truncation
+
+Interpretation guidance:
+- Higher MSE indicates greater image-level distortion.
+- Lower PSNR indicates greater image-level distortion.
+- Higher positive Dice or IoU drop indicates greater segmentation damage.
+- Small negative drops should be interpreted as stability, not genuine performance improvement.
+- MSE and PSNR do not fully predict segmentation damage; artifact type also matters.
+
+Terminology note:
+The stored condition name 'ringing' refers to frequency-domain truncation / a ringing-like frequency stress test, not pure classic Gibbs ringing.
+
+Condition-level results:
+blur_L1: MSE=0.000557, PSNR=33.02 dB, WT Dice drop=-0.004755, WT IoU drop=-0.006919
+blur_L2: MSE=0.003611, PSNR=24.83 dB, WT Dice drop=-0.003787, WT IoU drop=-0.004713
+blur_L3: MSE=0.006403, PSNR=22.28 dB, WT Dice drop=0.002800, WT IoU drop=0.006740
+blur_L4: MSE=0.008989, PSNR=20.78 dB, WT Dice drop=0.017135, WT IoU drop=0.029972
+blur_L5: MSE=0.011340, PSNR=19.75 dB, WT Dice drop=0.035416, WT IoU drop=0.058143
+ghosting_L1: MSE=0.001373, PSNR=28.92 dB, WT Dice drop=-0.005086, WT IoU drop=-0.007339
+ghosting_L2: MSE=0.003997, PSNR=24.27 dB, WT Dice drop=-0.003292, WT IoU drop=-0.003809
+ghosting_L3: MSE=0.007948, PSNR=21.29 dB, WT Dice drop=0.003742, WT IoU drop=0.008604
+ghosting_L4: MSE=0.013323, PSNR=19.04 dB, WT Dice drop=0.020470, WT IoU drop=0.035875
+ghosting_L5: MSE=0.020197, PSNR=17.24 dB, WT Dice drop=0.052153, WT IoU drop=0.084226
+noise_L1: MSE=0.000394, PSNR=34.04 dB, WT Dice drop=-0.003742, WT IoU drop=-0.005388
+noise_L2: MSE=0.001567, PSNR=28.05 dB, WT Dice drop=-0.003291, WT IoU drop=-0.004597
+noise_L3: MSE=0.003493, PSNR=24.57 dB, WT Dice drop=-0.002390, WT IoU drop=-0.003023
+noise_L4: MSE=0.006135, PSNR=22.12 dB, WT Dice drop=-0.001063, WT IoU drop=-0.000839
+noise_L5: MSE=0.009449, PSNR=20.25 dB, WT Dice drop=0.000541, WT IoU drop=0.001785
+noise_L6: MSE=0.020291, PSNR=16.93 dB, WT Dice drop=0.004004, WT IoU drop=0.007474
+noise_L7: MSE=0.033927, PSNR=14.70 dB, WT Dice drop=0.011423, WT IoU drop=0.018911
+noise_L8: MSE=0.065198, PSNR=11.87 dB, WT Dice drop=0.027860, WT IoU drop=0.043900
+noise_L9: MSE=0.095994, PSNR=10.18 dB, WT Dice drop=0.048608, WT IoU drop=0.074567
+noise_L10: MSE=0.122841, PSNR=9.11 dB, WT Dice drop=0.076180, WT IoU drop=0.111621
+contrast_L1: MSE=0.000566, PSNR=32.82 dB, WT Dice drop=-0.003651, WT IoU drop=-0.005315
+contrast_L2: MSE=0.003538, PSNR=24.86 dB, WT Dice drop=-0.003656, WT IoU drop=-0.005325
+contrast_L3: MSE=0.009058, PSNR=20.78 dB, WT Dice drop=-0.003695, WT IoU drop=-0.005392
+contrast_L4: MSE=0.017125, PSNR=18.01 dB, WT Dice drop=-0.003783, WT IoU drop=-0.005535
+contrast_L5: MSE=0.027739, PSNR=15.91 dB, WT Dice drop=-0.003943, WT IoU drop=-0.005779
+contrast_L6: MSE=0.023158, PSNR=16.54 dB, WT Dice drop=-0.006232, WT IoU drop=-0.009216
+contrast_L7: MSE=0.026144, PSNR=16.02 dB, WT Dice drop=-0.006468, WT IoU drop=-0.009589
+contrast_L8: MSE=0.029310, PSNR=15.52 dB, WT Dice drop=-0.006548, WT IoU drop=-0.009691
+contrast_L9: MSE=0.032657, PSNR=15.05 dB, WT Dice drop=-0.004942, WT IoU drop=-0.006927
+contrast_L10: MSE=0.034752, PSNR=14.78 dB, WT Dice drop=-0.000040, WT IoU drop=0.000627
+ringing_L1: MSE=0.000342, PSNR=35.29 dB, WT Dice drop=-0.003835, WT IoU drop=-0.005574
+ringing_L2: MSE=0.000642, PSNR=32.53 dB, WT Dice drop=-0.003769, WT IoU drop=-0.005455
+ringing_L3: MSE=0.001058, PSNR=30.32 dB, WT Dice drop=-0.003430, WT IoU drop=-0.004919
+ringing_L4: MSE=0.001644, PSNR=28.36 dB, WT Dice drop=-0.002849, WT IoU drop=-0.004021
+ringing_L5: MSE=0.002513, PSNR=26.48 dB, WT Dice drop=-0.001591, WT IoU drop=-0.001985
+ringing_L6: MSE=0.003816, PSNR=24.62 dB, WT Dice drop=-0.000658, WT IoU drop=-0.000313
+ringing_L7: MSE=0.006203, PSNR=22.44 dB, WT Dice drop=0.004584, WT IoU drop=0.008856
+ringing_L8: MSE=0.011446, PSNR=19.73 dB, WT Dice drop=0.032428, WT IoU drop=0.053849
+ringing_L9: MSE=0.016442, PSNR=18.12 dB, WT Dice drop=0.086505, WT IoU drop=0.130151
+ringing_L10: MSE=0.027633, PSNR=15.82 dB, WT Dice drop=0.288197, WT IoU drop=0.358828
+
+Artifact-level descriptive correlations:
+These correlations are descriptive only because they use a small number of ordered severity levels.
+
+Blur (n=5 levels): Spearman MSE vs WT Dice drop=1.000; Spearman MSE vs WT IoU drop=1.000
+Ghosting (n=5 levels): Spearman MSE vs WT Dice drop=1.000; Spearman MSE vs WT IoU drop=1.000
+Noise (n=10 levels): Spearman MSE vs WT Dice drop=1.000; Spearman MSE vs WT IoU drop=1.000
+Contrast (n=10 levels): Spearman MSE vs WT Dice drop=-0.321; Spearman MSE vs WT IoU drop=-0.321
+Frequency-domain truncation (n=10 levels): Spearman MSE vs WT Dice drop=1.000; Spearman MSE vs WT IoU drop=1.000
