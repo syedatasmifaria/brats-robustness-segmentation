@@ -1,0 +1,41 @@
+================================================================================
+Swin-UNETR fixed patient split
+================================================================================
+
+Source development cohort:
+294 patients from data/csvs/train_paths.csv
+
+Split method:
+Pandas dataframe shuffle using random_state=42
+Training fraction = 0.80
+
+Training patients:
+235
+
+Validation patients:
+59
+
+Held-out test patients:
+74 patients from data/csvs/test_paths.csv
+
+Overlap:
+Training vs validation = 0
+Training vs held-out test = 0
+Validation vs held-out test = 0
+
+Important validation rule:
+The patient split matches the earlier custom 3D U-Net split.
+However, Swin-UNETR validation will use full-volume sliding-window inference,
+not tumor-only patch validation.
+
+Training patient-ID file:
+31a_swin_unetr_train_patient_ids.csv
+
+Training patient-ID SHA-256:
+cb70809e06f62c422e83b6d73193117c589bec77c8a0f719a0998d2f5f34c655
+
+Validation patient-ID file:
+31a_swin_unetr_validation_patient_ids.csv
+
+Validation patient-ID SHA-256:
+c5831f45d2c0873066a7c7846ad7723b6fa312f880858b589858015062787efd
