@@ -1,0 +1,23 @@
+================================================================================
+Script 32B: Blur and ghosting pilot MSE/PSNR summary
+================================================================================
+
+Higher MSE indicates stronger image change.
+Lower PSNR indicates stronger image change.
+
+blur_L5: MSE mean=0.011169, MSE SD=0.003530, PSNR mean=19.77 dB, PSNR SD=1.59, n=20
+blur_L6: MSE mean=0.013038, MSE SD=0.004003, PSNR mean=19.08 dB, PSNR SD=1.54, n=20
+blur_L7: MSE mean=0.014717, MSE SD=0.004432, PSNR mean=18.55 dB, PSNR SD=1.51, n=20
+blur_L8: MSE mean=0.016253, MSE SD=0.004829, PSNR mean=18.11 dB, PSNR SD=1.48, n=20
+blur_L9: MSE mean=0.017680, MSE SD=0.005208, PSNR mean=17.74 dB, PSNR SD=1.46, n=20
+blur_L10: MSE mean=0.019027, MSE SD=0.005577, PSNR mean=17.41 dB, PSNR SD=1.44, n=20
+ghosting_L5: MSE mean=0.017651, MSE SD=0.006270, PSNR mean=17.77 dB, PSNR SD=1.45, n=20
+ghosting_L6: MSE mean=0.024427, MSE SD=0.008670, PSNR mean=16.36 dB, PSNR SD=1.45, n=20
+ghosting_L7: MSE mean=0.032582, MSE SD=0.011574, PSNR mean=15.11 dB, PSNR SD=1.45, n=20
+ghosting_L8: MSE mean=0.041929, MSE SD=0.014901, PSNR mean=14.01 dB, PSNR SD=1.45, n=20
+ghosting_L9: MSE mean=0.047142, MSE SD=0.016764, PSNR mean=13.51 dB, PSNR SD=1.45, n=20
+ghosting_L10: MSE mean=0.052401, MSE SD=0.018639, PSNR mean=13.05 dB, PSNR SD=1.45, n=20
+
+Monotonicity checks:
+blur: MSE strictly increases L5-L10=True; PSNR strictly decreases L5-L10=True; L6 stronger than L5=True
+ghosting: MSE strictly increases L5-L10=True; PSNR strictly decreases L5-L10=True; L6 stronger than L5=True

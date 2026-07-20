@@ -1,0 +1,41 @@
+================================================================================
+Script 32H: nnU-Net extended full evaluation drop summary
+================================================================================
+
+Drop formula:
+Drop = clean full-test metric - degraded pilot metric
+
+Clean full-test baseline, same 74 patients:
+WT Dice: 0.912460
+WT IoU:  0.846193
+TC Dice: 0.884438
+TC IoU:  0.808667
+ET Dice: 0.818585
+ET IoU:  0.728300
+
+Extended condition summaries:
+blur_L6: WT Dice 0.912460 -> 0.852769, drop=0.059691; WT IoU 0.846193 -> 0.754398, drop=0.091795; TC Dice drop=0.096569; ET Dice drop=0.135730; Pred WT voxels 93225.2 -> 109242.9
+blur_L7: WT Dice 0.912460 -> 0.830141, drop=0.082319; WT IoU 0.846193 -> 0.723751, drop=0.122442; TC Dice drop=0.124499; ET Dice drop=0.176746; Pred WT voxels 93225.2 -> 112959.2
+blur_L8: WT Dice 0.912460 -> 0.808620, drop=0.103840; WT IoU 0.846193 -> 0.696123, drop=0.150070; TC Dice drop=0.155796; ET Dice drop=0.214554; Pred WT voxels 93225.2 -> 116803.6
+blur_L9: WT Dice 0.912460 -> 0.788737, drop=0.123723; WT IoU 0.846193 -> 0.670695, drop=0.175498; TC Dice drop=0.184986; ET Dice drop=0.247252; Pred WT voxels 93225.2 -> 121649.8
+blur_L10: WT Dice 0.912460 -> 0.768225, drop=0.144235; WT IoU 0.846193 -> 0.645382, drop=0.200811; TC Dice drop=0.209712; ET Dice drop=0.272081; Pred WT voxels 93225.2 -> 126754.5
+ghosting_L6: WT Dice 0.912460 -> 0.805884, drop=0.106577; WT IoU 0.846193 -> 0.683463, drop=0.162730; TC Dice drop=0.047572; ET Dice drop=0.052760; Pred WT voxels 93225.2 -> 119160.4
+ghosting_L7: WT Dice 0.912460 -> 0.719172, drop=0.193288; WT IoU 0.846193 -> 0.574008, drop=0.272185; TC Dice drop=0.120011; ET Dice drop=0.155795; Pred WT voxels 93225.2 -> 136706.3
+ghosting_L8: WT Dice 0.912460 -> 0.596558, drop=0.315902; WT IoU 0.846193 -> 0.442383, drop=0.403810; TC Dice drop=0.268063; ET Dice drop=0.329658; Pred WT voxels 93225.2 -> 162359.6
+ghosting_L9: WT Dice 0.912460 -> 0.538052, drop=0.374408; WT IoU 0.846193 -> 0.385446, drop=0.460747; TC Dice drop=0.386014; ET Dice drop=0.464102; Pred WT voxels 93225.2 -> 175702.8
+ghosting_L10: WT Dice 0.912460 -> 0.491789, drop=0.420671; WT IoU 0.846193 -> 0.343543, drop=0.502649; TC Dice drop=0.535768; ET Dice drop=0.616885; Pred WT voxels 93225.2 -> 181167.4
+
+Potential breaking threshold check:
+Suggested break threshold: WT Dice drop >= 0.10 or WT IoU drop >= 0.15
+
+blur_L8: WT Dice drop=0.103840, WT IoU drop=0.150070
+blur_L9: WT Dice drop=0.123723, WT IoU drop=0.175498
+blur_L10: WT Dice drop=0.144235, WT IoU drop=0.200811
+ghosting_L6: WT Dice drop=0.106577, WT IoU drop=0.162730
+ghosting_L7: WT Dice drop=0.193288, WT IoU drop=0.272185
+ghosting_L8: WT Dice drop=0.315902, WT IoU drop=0.403810
+ghosting_L9: WT Dice drop=0.374408, WT IoU drop=0.460747
+ghosting_L10: WT Dice drop=0.420671, WT IoU drop=0.502649
+
+Interpretation note:
+This is the final 74-patient full stress-test evaluation for blur and ghosting L6-L10.

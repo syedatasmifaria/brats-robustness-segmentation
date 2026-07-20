@@ -1,0 +1,32 @@
+================================================================================
+Script 33A: Final nnU-Net all-artifact L1-L10 summary
+================================================================================
+
+Rows: 50
+Patients per condition: 74
+Artifacts: 5
+Levels per artifact: 10
+
+Drop formulas:
+Dice drop = clean Dice - degraded Dice
+IoU drop = clean IoU - degraded IoU
+
+Practical breaking threshold:
+WT Dice drop >= 0.10 or WT IoU drop >= 0.15
+
+First breaking level by artifact:
+Blur: 8
+Ghosting: 6
+Gaussian noise: None
+Contrast reduction: None
+Frequency-domain truncation: 10
+
+L10 summary:
+Blur: WT Dice=0.768225, WT Dice drop=0.144235, WT IoU=0.645382, WT IoU drop=0.200811, threshold crossed=True
+Ghosting: WT Dice=0.491789, WT Dice drop=0.420671, WT IoU=0.343543, WT IoU drop=0.502649, threshold crossed=True
+Gaussian noise: WT Dice=0.836280, WT Dice drop=0.076180, WT IoU=0.734571, WT IoU drop=0.111621, threshold crossed=False
+Contrast reduction: WT Dice=0.912500, WT Dice drop=-0.000040, WT IoU=0.845566, WT IoU drop=0.000627, threshold crossed=False
+Frequency-domain truncation: WT Dice=0.624263, WT Dice drop=0.288197, WT IoU=0.487364, WT IoU drop=0.358828, threshold crossed=True
+
+Terminology note:
+The internal artifact key 'ringing' refers to Fourier/frequency-domain truncation and should not be described as pure classic Gibbs ringing.

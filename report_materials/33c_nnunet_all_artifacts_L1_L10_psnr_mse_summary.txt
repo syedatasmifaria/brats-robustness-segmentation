@@ -1,0 +1,18 @@
+================================================================================
+Script 33C: Final nnU-Net image-quality summary, all artifacts L1-L10
+================================================================================
+
+Conditions: 50
+Patients per condition: 74
+Modalities per patient: 4
+Measurements per condition: 296
+
+Higher MSE indicates stronger image change.
+Lower PSNR indicates stronger image change.
+
+L10 summary:
+Blur: MSE=0.020360, PSNR=17.15 dB
+Ghosting: MSE=0.059850, PSNR=12.52 dB
+Gaussian noise: MSE=0.122841, PSNR=9.11 dB
+Contrast reduction: MSE=0.034752, PSNR=14.78 dB
+Frequency-domain truncation: MSE=0.027633, PSNR=15.82 dB
