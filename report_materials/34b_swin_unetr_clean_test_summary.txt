@@ -1,0 +1,38 @@
+================================================================================
+Script 34B: Swin-UNETR clean test evaluation
+================================================================================
+
+Checkpoint: /home/xfh25/brats_segmentation_project/models/swin_unetr/swin_unetr_full_timing_20260719/best_checkpoint.pth
+Checkpoint epoch: 45
+Best validation epoch: 45
+Best validation macro Dice: 0.833005
+
+Test patients: 74
+Test cohort used for checkpoint selection: No
+Clean-trained model: Yes
+Clean test images: Yes
+Full-volume sliding-window inference: Yes
+ROI size: 96 x 96 x 96
+Sliding-window batch size: 1
+Sliding-window overlap: 0.5
+Blend mode: gaussian
+AMP enabled: True
+
+Mean test metrics
+--------------------------------------------------------------------------------
+WT Dice: 0.896151 (SD 0.072012)
+WT IoU:  0.818556 (SD 0.105176)
+TC Dice: 0.846958 (SD 0.142381)
+TC IoU:  0.756267 (SD 0.180160)
+ET Dice: 0.741703 (SD 0.264082)
+ET IoU:  0.643793 (SD 0.266927)
+Macro regional Dice: 0.828271
+
+Whole-tumor voxel counts
+--------------------------------------------------------------------------------
+Mean predicted WT voxels: 97681.43
+Mean true WT voxels: 99706.23
+
+Total evaluation time: 3.94 minutes
+Mean inference time per patient: 3.19 seconds
+Patient metrics CSV: /home/xfh25/brats_segmentation_project/results/34b_swin_unetr_clean_test_metrics.csv

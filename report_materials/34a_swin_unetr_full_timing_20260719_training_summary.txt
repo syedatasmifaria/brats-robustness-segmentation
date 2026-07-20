@@ -1,0 +1,72 @@
+================================================================================
+Script 34A: Swin-UNETR clean training summary
+================================================================================
+
+Run name: swin_unetr_full_timing_20260719
+Current epoch: 50
+Requested final epoch: 50
+Best epoch: 45
+Best validation macro Dice: 0.833005
+
+Architecture
+--------------------------------------------------------------------------------
+Model: MONAI SwinUNETR
+Input channels: 4
+Output classes: 4
+Feature size: 24
+Use checkpointing: False
+Patch size: (96, 96, 96)
+
+Training sampler
+--------------------------------------------------------------------------------
+Tumor-centered: 50%
+Mixed/random brain: 25%
+Guaranteed tumor-free brain: 25%
+
+Data split
+--------------------------------------------------------------------------------
+Training patients: 235
+Validation patients: 59
+Held-out test patients: 74
+The held-out test cohort is not used for checkpoint selection.
+
+Validation
+--------------------------------------------------------------------------------
+Full-volume MONAI sliding-window inference
+ROI size: (96, 96, 96)
+Overlap: 0.5
+Blend mode: Gaussian
+Best checkpoint criterion: mean of WT, TC, and ET validation Dice
+
+Latest epoch record
+--------------------------------------------------------------------------------
+epoch: 50
+completed_train_batches: 235
+train_loss: 0.5427284641785824
+train_minutes: 2.048042914023002
+peak_gpu_memory_gb: 3.407721519470215
+tumor_centered_patches: 123
+mixed_random_patches: 61
+tumor_free_patches: 47
+mixed_random_fallback_patches: 4
+tumor_free_search_attempts_mean: 34.723404255319146
+validation_performed: True
+val_dice_WT: 0.9042401660846936
+val_iou_WT: 0.8304778380668756
+val_dice_TC: 0.8240183102923355
+val_iou_TC: 0.7394161350695911
+val_dice_ET: 0.7570808689326924
+val_iou_ET: 0.6598526389200686
+val_macro_dice: 0.828446448436574
+val_pred_WT_voxels_mean: 100129.86440677966
+val_true_WT_voxels_mean: 99129.2372881356
+validation_minutes: 3.123923384056737
+validation_metrics_path: /home/xfh25/brats_segmentation_project/results/34a_swin_unetr_full_timing_20260719_validation_epoch_050_metrics.csv
+best_epoch_so_far: 45
+best_val_macro_dice_so_far: 0.8330050323063388
+learning_rate: 0.0001
+
+Checkpoints
+--------------------------------------------------------------------------------
+Best: /home/xfh25/brats_segmentation_project/models/swin_unetr/swin_unetr_full_timing_20260719/best_checkpoint.pth
+Last: /home/xfh25/brats_segmentation_project/models/swin_unetr/swin_unetr_full_timing_20260719/last_checkpoint.pth

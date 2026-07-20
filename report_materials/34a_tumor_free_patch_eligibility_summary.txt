@@ -1,0 +1,16 @@
+================================================================================
+96³ tumor-free patch eligibility audit
+================================================================================
+
+Training patients: 235
+Eligible patients: 228
+Ineligible patients: 7
+
+Ineligible patient IDs:
+BraTS20_Training_273
+BraTS20_Training_340
+BraTS20_Training_293
+BraTS20_Training_089
+BraTS20_Training_069
+BraTS20_Training_175
+BraTS20_Training_316
