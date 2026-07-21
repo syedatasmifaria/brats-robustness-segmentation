@@ -1,0 +1,90 @@
+{
+  "artifact": "ghosting",
+  "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "max_patients": null,
+  "checkpoint": "/home/xfh25/brats_segmentation_project/models/swin_unetr/swin_unetr_full_timing_20260719/best_checkpoint.pth",
+  "checkpoint_epoch": 45,
+  "best_epoch": 45,
+  "best_validation_macro_dice": 0.8330050323063388,
+  "test_csv": "/home/xfh25/brats_segmentation_project/data/csvs/test_paths.csv",
+  "full_test_patients": 74,
+  "evaluated_patients": 74,
+  "device": "cuda:0",
+  "gpu": "NVIDIA RTX A5000",
+  "amp_enabled": true,
+  "roi_size": [
+    96,
+    96,
+    96
+  ],
+  "sw_batch_size": 1,
+  "sw_overlap": 0.5,
+  "blend_mode": "gaussian",
+  "output_stitching_device": "cpu",
+  "pipeline_by_level": {
+    "1": "script26a_restored_original_range",
+    "2": "script26a_restored_original_range",
+    "3": "script26a_restored_original_range",
+    "4": "script26a_restored_original_range",
+    "5": "script26a_restored_original_range",
+    "6": "script26a_restored_original_range",
+    "7": "script26a_restored_original_range",
+    "8": "script26a_restored_original_range",
+    "9": "script26a_restored_original_range",
+    "10": "script26a_restored_original_range"
+  },
+  "parameters": {
+    "1": {
+      "num_repeats": 4,
+      "intensity": 0.15
+    },
+    "2": {
+      "num_repeats": 8,
+      "intensity": 0.25
+    },
+    "3": {
+      "num_repeats": 12,
+      "intensity": 0.35
+    },
+    "4": {
+      "num_repeats": 16,
+      "intensity": 0.45
+    },
+    "5": {
+      "num_repeats": 20,
+      "intensity": 0.55
+    },
+    "6": {
+      "num_repeats": 24,
+      "intensity": 0.65
+    },
+    "7": {
+      "num_repeats": 28,
+      "intensity": 0.75
+    },
+    "8": {
+      "num_repeats": 32,
+      "intensity": 0.85
+    },
+    "9": {
+      "num_repeats": 36,
+      "intensity": 0.9
+    },
+    "10": {
+      "num_repeats": 40,
+      "intensity": 0.95
+    }
+  },
+  "script29a_noise_sequence_exact": false
+}

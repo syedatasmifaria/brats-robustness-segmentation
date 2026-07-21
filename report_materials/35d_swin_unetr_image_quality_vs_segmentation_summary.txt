@@ -1,0 +1,17 @@
+================================================================================
+Swin-UNETR image quality versus segmentation summary
+================================================================================
+
+Conditions: 50
+Patients per condition: 74
+Breaking rule: WT Dice drop >= 0.10 or WT IoU drop >= 0.15
+
+First breaking condition by artifact:
+          artifact first_break_level  mse_mean  psnr_mean dice_WT_drop_mean iou_WT_drop_mean
+              Blur                 4  0.008989  20.776719          0.133158           0.1683
+          Ghosting                 5  0.020197  17.238633          0.158006         0.215819
+    Gaussian noise                 7  0.033927  14.703936          0.169118         0.220547
+Contrast reduction              None                                                        
+Fourier truncation                 8  0.011446  19.725249          0.147841          0.18524
+
+Terminology: internal key 'ringing' represents Fourier/frequency-domain truncation, not pure classic Gibbs ringing.

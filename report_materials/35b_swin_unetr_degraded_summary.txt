@@ -1,0 +1,162 @@
+========================================================================================
+Script 35B: Swin-UNETR degraded evaluation summary
+========================================================================================
+
+Patient-condition rows: 3700
+Patients: 74
+Conditions: 50
+Duplicate patient-condition rows: 0
+Missing Dice/IoU values: 0
+
+Clean baseline means
+----------------------------------------------------------------------------------------
+dice_WT: 0.896151 (SD 0.072012)
+iou_WT: 0.818556 (SD 0.105176)
+dice_TC: 0.846958 (SD 0.142381)
+iou_TC: 0.756267 (SD 0.180160)
+dice_ET: 0.741703 (SD 0.264082)
+iou_ET: 0.643793 (SD 0.266927)
+
+Condition means and paired drops
+Drop = clean patient metric - degraded patient metric
+----------------------------------------------------------------------------------------
+
+Blur
+........................................................................................
+blur_L1 | WT Dice 0.886814 | WT drop 0.009337 | TC drop 0.008319 | ET drop 0.014584
+blur_L2 | WT Dice 0.842200 | WT drop 0.053951 | TC drop 0.044528 | ET drop 0.055890
+blur_L3 | WT Dice 0.798056 | WT drop 0.098095 | TC drop 0.090625 | ET drop 0.096687
+blur_L4 | WT Dice 0.762993 | WT drop 0.133158 | TC drop 0.129253 | ET drop 0.129146
+blur_L5 | WT Dice 0.732385 | WT drop 0.163767 | TC drop 0.164625 | ET drop 0.154575
+blur_L6 | WT Dice 0.703694 | WT drop 0.192458 | TC drop 0.194648 | ET drop 0.175754
+blur_L7 | WT Dice 0.674247 | WT drop 0.221905 | TC drop 0.227539 | ET drop 0.195172
+blur_L8 | WT Dice 0.644770 | WT drop 0.251381 | TC drop 0.262486 | ET drop 0.215573
+blur_L9 | WT Dice 0.618102 | WT drop 0.278050 | TC drop 0.295522 | ET drop 0.237356
+blur_L10 | WT Dice 0.593757 | WT drop 0.302395 | TC drop 0.324506 | ET drop 0.259875
+
+Ghosting
+........................................................................................
+ghosting_L1 | WT Dice 0.890231 | WT drop 0.005920 | TC drop 0.001739 | ET drop 0.002118
+ghosting_L2 | WT Dice 0.879492 | WT drop 0.016659 | TC drop 0.004590 | ET drop 0.002195
+ghosting_L3 | WT Dice 0.857479 | WT drop 0.038672 | TC drop 0.013984 | ET drop 0.006359
+ghosting_L4 | WT Dice 0.812585 | WT drop 0.083566 | TC drop 0.036170 | ET drop 0.019791
+ghosting_L5 | WT Dice 0.738145 | WT drop 0.158006 | TC drop 0.084126 | ET drop 0.057235
+ghosting_L6 | WT Dice 0.635159 | WT drop 0.260992 | TC drop 0.202293 | ET drop 0.165574
+ghosting_L7 | WT Dice 0.531332 | WT drop 0.364819 | TC drop 0.359053 | ET drop 0.326976
+ghosting_L8 | WT Dice 0.456952 | WT drop 0.439199 | TC drop 0.473690 | ET drop 0.449534
+ghosting_L9 | WT Dice 0.426966 | WT drop 0.469185 | TC drop 0.526120 | ET drop 0.506198
+ghosting_L10 | WT Dice 0.402800 | WT drop 0.493351 | TC drop 0.573461 | ET drop 0.557279
+
+Gaussian noise
+........................................................................................
+noise_L1 | WT Dice 0.895871 | WT drop 0.000280 | TC drop 0.000915 | ET drop 0.001858
+noise_L2 | WT Dice 0.895467 | WT drop 0.000684 | TC drop 0.001100 | ET drop 0.002104
+noise_L3 | WT Dice 0.892502 | WT drop 0.003649 | TC drop 0.002535 | ET drop 0.003304
+noise_L4 | WT Dice 0.886146 | WT drop 0.010005 | TC drop 0.002561 | ET drop 0.004400
+noise_L5 | WT Dice 0.875328 | WT drop 0.020823 | TC drop 0.005666 | ET drop 0.007855
+noise_L6 | WT Dice 0.818587 | WT drop 0.077564 | TC drop 0.016382 | ET drop 0.024218
+noise_L7 | WT Dice 0.727033 | WT drop 0.169118 | TC drop 0.058711 | ET drop 0.063062
+noise_L8 | WT Dice 0.467934 | WT drop 0.428217 | TC drop 0.249119 | ET drop 0.224185
+noise_L9 | WT Dice 0.174760 | WT drop 0.721391 | TC drop 0.570432 | ET drop 0.501195
+noise_L10 | WT Dice 0.022442 | WT drop 0.873710 | TC drop 0.801943 | ET drop 0.641184
+
+Contrast reduction
+........................................................................................
+contrast_L1 | WT Dice 0.895793 | WT drop 0.000358 | TC drop 0.000473 | ET drop 0.001421
+contrast_L2 | WT Dice 0.895801 | WT drop 0.000350 | TC drop 0.000465 | ET drop 0.001417
+contrast_L3 | WT Dice 0.895800 | WT drop 0.000351 | TC drop 0.000468 | ET drop 0.001420
+contrast_L4 | WT Dice 0.895795 | WT drop 0.000356 | TC drop 0.000471 | ET drop 0.001419
+contrast_L5 | WT Dice 0.895797 | WT drop 0.000354 | TC drop 0.000471 | ET drop 0.001425
+contrast_L6 | WT Dice 0.895797 | WT drop 0.000354 | TC drop 0.000470 | ET drop 0.001421
+contrast_L7 | WT Dice 0.895794 | WT drop 0.000357 | TC drop 0.000473 | ET drop 0.001425
+contrast_L8 | WT Dice 0.895796 | WT drop 0.000355 | TC drop 0.000472 | ET drop 0.001428
+contrast_L9 | WT Dice 0.895794 | WT drop 0.000357 | TC drop 0.000470 | ET drop 0.001424
+contrast_L10 | WT Dice 0.895795 | WT drop 0.000356 | TC drop 0.000469 | ET drop 0.001427
+
+Fourier truncation / frequency-domain ringing-like degradation
+........................................................................................
+ringing_L1 | WT Dice 0.895620 | WT drop 0.000532 | TC drop -0.000511 | ET drop 0.001480
+ringing_L2 | WT Dice 0.895092 | WT drop 0.001059 | TC drop -0.000196 | ET drop 0.002705
+ringing_L3 | WT Dice 0.893858 | WT drop 0.002293 | TC drop 0.001131 | ET drop 0.005330
+ringing_L4 | WT Dice 0.891864 | WT drop 0.004287 | TC drop 0.004183 | ET drop 0.010798
+ringing_L5 | WT Dice 0.886861 | WT drop 0.009290 | TC drop 0.011159 | ET drop 0.022029
+ringing_L6 | WT Dice 0.870864 | WT drop 0.025287 | TC drop 0.025217 | ET drop 0.044517
+ringing_L7 | WT Dice 0.834962 | WT drop 0.061189 | TC drop 0.061454 | ET drop 0.088147
+ringing_L8 | WT Dice 0.748310 | WT drop 0.147841 | TC drop 0.153916 | ET drop 0.180274
+ringing_L9 | WT Dice 0.652253 | WT drop 0.243898 | TC drop 0.248172 | ET drop 0.251855
+ringing_L10 | WT Dice 0.451236 | WT drop 0.444915 | TC drop 0.480539 | ET drop 0.427270
+
+Ten largest mean WT Dice drops
+----------------------------------------------------------------------------------------
+01. noise_L10 | WT Dice 0.022442 | Mean paired drop 0.873710
+02. noise_L9 | WT Dice 0.174760 | Mean paired drop 0.721391
+03. ghosting_L10 | WT Dice 0.402800 | Mean paired drop 0.493351
+04. ghosting_L9 | WT Dice 0.426966 | Mean paired drop 0.469185
+05. ringing_L10 | WT Dice 0.451236 | Mean paired drop 0.444915
+06. ghosting_L8 | WT Dice 0.456952 | Mean paired drop 0.439199
+07. noise_L8 | WT Dice 0.467934 | Mean paired drop 0.428217
+08. ghosting_L7 | WT Dice 0.531332 | Mean paired drop 0.364819
+09. blur_L10 | WT Dice 0.593757 | Mean paired drop 0.302395
+10. blur_L9 | WT Dice 0.618102 | Mean paired drop 0.278050
+
+Conditions containing zero-Dice patients
+----------------------------------------------------------------------------------------
+blur_L1 | WT zeros 0 | TC zeros 0 | ET zeros 5
+blur_L2 | WT zeros 0 | TC zeros 0 | ET zeros 5
+blur_L3 | WT zeros 0 | TC zeros 0 | ET zeros 5
+blur_L4 | WT zeros 0 | TC zeros 0 | ET zeros 5
+blur_L5 | WT zeros 0 | TC zeros 0 | ET zeros 5
+blur_L6 | WT zeros 0 | TC zeros 0 | ET zeros 5
+blur_L7 | WT zeros 0 | TC zeros 0 | ET zeros 5
+blur_L8 | WT zeros 0 | TC zeros 0 | ET zeros 5
+blur_L9 | WT zeros 0 | TC zeros 0 | ET zeros 6
+blur_L10 | WT zeros 0 | TC zeros 0 | ET zeros 6
+ghosting_L1 | WT zeros 0 | TC zeros 0 | ET zeros 5
+ghosting_L2 | WT zeros 0 | TC zeros 0 | ET zeros 5
+ghosting_L3 | WT zeros 0 | TC zeros 0 | ET zeros 5
+ghosting_L4 | WT zeros 0 | TC zeros 0 | ET zeros 5
+ghosting_L5 | WT zeros 0 | TC zeros 0 | ET zeros 5
+ghosting_L6 | WT zeros 0 | TC zeros 0 | ET zeros 5
+ghosting_L7 | WT zeros 0 | TC zeros 1 | ET zeros 6
+ghosting_L8 | WT zeros 0 | TC zeros 3 | ET zeros 9
+ghosting_L9 | WT zeros 1 | TC zeros 3 | ET zeros 9
+ghosting_L10 | WT zeros 1 | TC zeros 3 | ET zeros 11
+noise_L1 | WT zeros 0 | TC zeros 0 | ET zeros 5
+noise_L2 | WT zeros 0 | TC zeros 0 | ET zeros 5
+noise_L3 | WT zeros 0 | TC zeros 0 | ET zeros 5
+noise_L4 | WT zeros 0 | TC zeros 0 | ET zeros 5
+noise_L5 | WT zeros 0 | TC zeros 0 | ET zeros 5
+noise_L6 | WT zeros 0 | TC zeros 0 | ET zeros 5
+noise_L7 | WT zeros 0 | TC zeros 0 | ET zeros 5
+noise_L8 | WT zeros 3 | TC zeros 3 | ET zeros 6
+noise_L9 | WT zeros 7 | TC zeros 12 | ET zeros 16
+noise_L10 | WT zeros 24 | TC zeros 40 | ET zeros 42
+contrast_L1 | WT zeros 0 | TC zeros 0 | ET zeros 5
+contrast_L2 | WT zeros 0 | TC zeros 0 | ET zeros 5
+contrast_L3 | WT zeros 0 | TC zeros 0 | ET zeros 5
+contrast_L4 | WT zeros 0 | TC zeros 0 | ET zeros 5
+contrast_L5 | WT zeros 0 | TC zeros 0 | ET zeros 5
+contrast_L6 | WT zeros 0 | TC zeros 0 | ET zeros 5
+contrast_L7 | WT zeros 0 | TC zeros 0 | ET zeros 5
+contrast_L8 | WT zeros 0 | TC zeros 0 | ET zeros 5
+contrast_L9 | WT zeros 0 | TC zeros 0 | ET zeros 5
+contrast_L10 | WT zeros 0 | TC zeros 0 | ET zeros 5
+ringing_L1 | WT zeros 0 | TC zeros 0 | ET zeros 5
+ringing_L2 | WT zeros 0 | TC zeros 0 | ET zeros 5
+ringing_L3 | WT zeros 0 | TC zeros 0 | ET zeros 5
+ringing_L4 | WT zeros 0 | TC zeros 0 | ET zeros 5
+ringing_L5 | WT zeros 0 | TC zeros 0 | ET zeros 5
+ringing_L6 | WT zeros 0 | TC zeros 0 | ET zeros 5
+ringing_L7 | WT zeros 0 | TC zeros 0 | ET zeros 5
+ringing_L8 | WT zeros 0 | TC zeros 0 | ET zeros 5
+ringing_L9 | WT zeros 0 | TC zeros 0 | ET zeros 5
+ringing_L10 | WT zeros 0 | TC zeros 0 | ET zeros 9
+
+Methodological notes
+----------------------------------------------------------------------------------------
+All models were trained on clean MRI only.
+Degradations were evaluation-only.
+Drops use paired clean and degraded patient metrics.
+The internal label ringing represents Fourier truncation / frequency-domain ringing-like degradation.
+Contrast results must be interpreted alongside nonzero z-score normalization, which removes linear intensity scaling.
+========================================================================================

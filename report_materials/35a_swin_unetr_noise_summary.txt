@@ -1,0 +1,49 @@
+================================================================================
+Script 35A: Swin-UNETR noise degraded evaluation
+================================================================================
+
+Artifact: noise
+Reporting label: noise
+Checkpoint: /home/xfh25/brats_segmentation_project/models/swin_unetr/swin_unetr_full_timing_20260719/best_checkpoint.pth
+Checkpoint epoch: 45
+Best validation epoch: 45
+Best validation macro Dice: 0.833005
+Clean-trained model: Yes
+Degradation used for training: No
+Test cohort used for checkpoint selection: No
+Full-volume sliding-window inference: Yes
+ROI size: 96 x 96 x 96
+Sliding-window batch size: 1
+Sliding-window overlap: 0.5
+Blend mode: gaussian
+Output stitching device: CPU
+AMP enabled: True
+
+Rows: 740
+Unique patients: 74
+Conditions: 10
+
+Condition means
+--------------------------------------------------------------------------------
+noise_L1 | WT Dice 0.895871 | TC Dice 0.846042 | ET Dice 0.739846 | WT IoU 0.817538
+noise_L2 | WT Dice 0.895467 | TC Dice 0.845858 | ET Dice 0.739599 | WT IoU 0.816820
+noise_L3 | WT Dice 0.892502 | TC Dice 0.844423 | ET Dice 0.738399 | WT IoU 0.812274
+noise_L4 | WT Dice 0.886146 | TC Dice 0.844397 | ET Dice 0.737303 | WT IoU 0.802924
+noise_L5 | WT Dice 0.875328 | TC Dice 0.841292 | ET Dice 0.733848 | WT IoU 0.787158
+noise_L6 | WT Dice 0.818587 | TC Dice 0.830575 | ET Dice 0.717485 | WT IoU 0.707715
+noise_L7 | WT Dice 0.727033 | TC Dice 0.788247 | ET Dice 0.678642 | WT IoU 0.598009
+noise_L8 | WT Dice 0.467934 | TC Dice 0.597839 | ET Dice 0.517518 | WT IoU 0.339378
+noise_L9 | WT Dice 0.174760 | TC Dice 0.276526 | ET Dice 0.240509 | WT IoU 0.106922
+noise_L10 | WT Dice 0.022442 | TC Dice 0.045014 | ET Dice 0.100519 | WT IoU 0.012551
+
+Total evaluation time: 59.39 minutes
+Mean inference time per patient-condition: 2.80 seconds
+Mean degradation/preprocessing time per patient-condition: 1.35 seconds
+
+Pipeline note:
+L1-L5 use Script 26A normalization, degradation, and restoration.
+Blur and ghosting L6-L10 also use the Script 26A restored-range pipeline.
+Noise, contrast, and ringing L6-L10 use Script 29A's saved-[0,1] pipeline.
+Script 29A contrast is centered on the brain-intensity mean.
+Script 29A noise uses its original global seed and loop sequence.
+================================================================================

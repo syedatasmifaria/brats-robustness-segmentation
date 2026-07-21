@@ -1,0 +1,80 @@
+{
+  "artifact": "ringing",
+  "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "max_patients": null,
+  "checkpoint": "/home/xfh25/brats_segmentation_project/models/swin_unetr/swin_unetr_full_timing_20260719/best_checkpoint.pth",
+  "checkpoint_epoch": 45,
+  "best_epoch": 45,
+  "best_validation_macro_dice": 0.8330050323063388,
+  "test_csv": "/home/xfh25/brats_segmentation_project/data/csvs/test_paths.csv",
+  "full_test_patients": 74,
+  "evaluated_patients": 74,
+  "device": "cuda:0",
+  "gpu": "NVIDIA RTX A5000",
+  "amp_enabled": true,
+  "roi_size": [
+    96,
+    96,
+    96
+  ],
+  "sw_batch_size": 1,
+  "sw_overlap": 0.5,
+  "blend_mode": "gaussian",
+  "output_stitching_device": "cpu",
+  "pipeline_by_level": {
+    "1": "script26a_restored_original_range",
+    "2": "script26a_restored_original_range",
+    "3": "script26a_restored_original_range",
+    "4": "script26a_restored_original_range",
+    "5": "script26a_restored_original_range",
+    "6": "script29a_saved_normalized_01",
+    "7": "script29a_saved_normalized_01",
+    "8": "script29a_saved_normalized_01",
+    "9": "script29a_saved_normalized_01",
+    "10": "script29a_saved_normalized_01"
+  },
+  "parameters": {
+    "1": {
+      "keep_fraction": 0.85
+    },
+    "2": {
+      "keep_fraction": 0.75
+    },
+    "3": {
+      "keep_fraction": 0.65
+    },
+    "4": {
+      "keep_fraction": 0.55
+    },
+    "5": {
+      "keep_fraction": 0.45
+    },
+    "6": {
+      "keep_fraction": 0.35
+    },
+    "7": {
+      "keep_fraction": 0.25
+    },
+    "8": {
+      "keep_fraction": 0.15
+    },
+    "9": {
+      "keep_fraction": 0.1
+    },
+    "10": {
+      "keep_fraction": 0.05
+    }
+  },
+  "script29a_noise_sequence_exact": false
+}

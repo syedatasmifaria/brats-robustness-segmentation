@@ -1,0 +1,6 @@
+artifact,artifact_display,nnunet_first_break_level,swin_unetr_first_break_level,comparison
+blur,Blur,8.0,4.0,nnU-Net more robust
+ghosting,Ghosting,6.0,5.0,nnU-Net more robust
+noise,Gaussian noise,,7.0,nnU-Net more robust
+contrast,Contrast reduction,,,Neither model crossed
+ringing,Fourier truncation,10.0,8.0,nnU-Net more robust
