@@ -1,0 +1,50 @@
+{
+  "script": "36b_evaluate_swin_gradcam_clean_degraded.py",
+  "checkpoint": "/home/xfh25/brats_segmentation_project/models/swin_unetr/swin_unetr_full_timing_20260719/best_checkpoint.pth",
+  "checkpoint_epoch": 45,
+  "target_layer": "decoder3.conv_block",
+  "target_definition": "Mean differentiable WT tumor score inside model-predicted WT region",
+  "patch_size": [
+    96,
+    96,
+    96
+  ],
+  "patch_reference": "Fixed clean ground-truth tumor-centered coordinates recorded in the selection CSV",
+  "selected_patients": [
+    "BraTS20_Training_178",
+    "BraTS20_Training_203",
+    "BraTS20_Training_046",
+    "BraTS20_Training_094",
+    "BraTS20_Training_166"
+  ],
+  "condition_plan": {
+    "blur": [
+      3,
+      4,
+      10
+    ],
+    "ghosting": [
+      4,
+      5,
+      10
+    ],
+    "noise": [
+      6,
+      7,
+      10
+    ],
+    "ringing": [
+      7,
+      8,
+      10
+    ],
+    "contrast": [
+      10
+    ]
+  },
+  "device": "cuda:0",
+  "gpu": "NVIDIA RTX A5000",
+  "seed": 2026,
+  "script29a_noise_sequence_exact": true,
+  "gradcam_interpretation": "Spatial attribution, not causal explanation"
+}

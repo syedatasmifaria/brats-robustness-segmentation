@@ -82,3 +82,11 @@ results/*patch_preview*.png
 results/19_visualize_*_levels_all_modalities.png
 results/05b_selected_training_slices_preview.png
 nnunet/temporary_degraded_tests/
+
+# Swin Grad-CAM outputs
+report_materials/swin_xai_36b/*/arrays/
+report_materials/swin_xai_36b/failed_partial_before_empty_WT_fix/
+
+# Keep the finalized lightweight XAI metrics table
+!report_materials/swin_xai_36b/final/36b_swin_xai_condition_metrics.csv
+report_materials/swin_xai_36b/*/figures/
