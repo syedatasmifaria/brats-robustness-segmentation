@@ -90,3 +90,7 @@ report_materials/swin_xai_36b/failed_partial_before_empty_WT_fix/
 # Keep the finalized lightweight XAI metrics table
 !report_materials/swin_xai_36b/final/36b_swin_xai_condition_metrics.csv
 report_materials/swin_xai_36b/*/figures/
+
+report_materials/nnunet_xai_37b/*/arrays/
+
+!report_materials/nnunet_xai_37b/final/37b_nnunet_xai_condition_metrics.csv

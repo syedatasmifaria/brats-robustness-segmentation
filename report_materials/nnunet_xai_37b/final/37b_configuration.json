@@ -1,0 +1,52 @@
+{
+  "script": "37b_evaluate_nnunet_gradcam_clean_degraded.py",
+  "model_folder": "/home/xfh25/brats_segmentation_project/nnunet/nnUNet_results/Dataset501_BraTS2020Multimodal/nnUNetTrainer__nnUNetPlans__3d_fullres",
+  "checkpoint": "fold_0/checkpoint_best.pth",
+  "model_class": "PlainConvUNet",
+  "target_layer": "decoder.stages[3]",
+  "target_feature_resolution": [
+    64,
+    64,
+    64
+  ],
+  "target_definition": "Mean differentiable tumor logit inside the model-predicted whole-tumor region",
+  "patch_size_zyx": [
+    128,
+    128,
+    128
+  ],
+  "input_source": "Exact saved clean and degraded nnU-Net input NIfTI files",
+  "preprocessing": "SimpleITKIO plus official nnU-Net run_case_npy",
+  "selected_patients": [
+    "BraTS20_Training_178",
+    "BraTS20_Training_203",
+    "BraTS20_Training_046",
+    "BraTS20_Training_094",
+    "BraTS20_Training_166"
+  ],
+  "selected_conditions": [
+    "clean",
+    "blur_L3",
+    "blur_L4",
+    "blur_L10",
+    "ghosting_L4",
+    "ghosting_L5",
+    "ghosting_L10",
+    "noise_L6",
+    "noise_L7",
+    "noise_L10",
+    "ringing_L7",
+    "ringing_L8",
+    "ringing_L10",
+    "contrast_L10"
+  ],
+  "device": "cuda:0",
+  "gpu": "NVIDIA RTX A5000",
+  "seed": 2026,
+  "coordinate_order": "z, y, x",
+  "high_saliency_percentile": 80,
+  "global_slice_definition": "Preprocessed-volume axial z, not raw MRI z",
+  "zero_WT_handling": "Unavailable status, NaN attribution metrics, zero CAM placeholder",
+  "ringing_reporting_label": "Fourier truncation or low-pass frequency stress test",
+  "gradcam_interpretation": "Spatial attribution associated with the target score, not a causal explanation of model reasoning"
+}

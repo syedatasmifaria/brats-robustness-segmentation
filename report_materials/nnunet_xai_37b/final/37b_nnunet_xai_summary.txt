@@ -1,0 +1,45 @@
+================================================================================
+Script 37B: nnU-Net clean-versus-degraded Grad-CAM summary
+================================================================================
+
+Patients: 5
+Conditions per patient: 14
+Rows: 70
+Arrays: 70
+Figures: 70
+Unavailable attribution maps: 0
+Model: PlainConvUNet
+Checkpoint: fold_0/checkpoint_best.pth
+Target layer: decoder.stages[3]
+Target definition: mean differentiable tumor logit inside the model-predicted whole-tumor region
+Input source: exact saved clean and degraded nnU-Net input NIfTI files
+Preprocessing: SimpleITKIO plus official nnU-Net run_case_npy
+Ground truth was used for fixed patch placement, representative slice selection, and descriptive evaluation only.
+Global axial slice values are preprocessed-volume coordinates, not raw MRI coordinates.
+Grad-CAM provides a spatial attribution map associated with the selected target score. It does not establish a causal explanation of model reasoning.
+The internal ringing condition should be reported as Fourier truncation or a low-pass frequency stress test.
+
+Mean metrics by condition
+--------------------------------------------------------------------------------
+clean | patch WT Dice 0.8808 | inside/outside 63.767 | high-saliency WT IoU 0.101 | clean correlation 1.000 | centroid shift 0.000
+blur_L3 | patch WT Dice 0.8618 | inside/outside 100.105 | high-saliency WT IoU 0.065 | clean correlation 0.951 | centroid shift 7.947
+blur_L4 | patch WT Dice 0.8362 | inside/outside 77.093 | high-saliency WT IoU 0.063 | clean correlation 0.925 | centroid shift 8.401
+blur_L10 | patch WT Dice 0.6719 | inside/outside 40.529 | high-saliency WT IoU 0.096 | clean correlation 0.716 | centroid shift 14.403
+ghosting_L4 | patch WT Dice 0.8751 | inside/outside 51.913 | high-saliency WT IoU 0.175 | clean correlation 0.930 | centroid shift 4.323
+ghosting_L5 | patch WT Dice 0.8474 | inside/outside 41.727 | high-saliency WT IoU 0.163 | clean correlation 0.883 | centroid shift 7.119
+ghosting_L10 | patch WT Dice 0.4703 | inside/outside 13.096 | high-saliency WT IoU 0.097 | clean correlation 0.389 | centroid shift 19.409
+noise_L6 | patch WT Dice 0.8764 | inside/outside 52.258 | high-saliency WT IoU 0.096 | clean correlation 0.970 | centroid shift 3.771
+noise_L7 | patch WT Dice 0.8643 | inside/outside 55.734 | high-saliency WT IoU 0.095 | clean correlation 0.959 | centroid shift 4.748
+noise_L10 | patch WT Dice 0.7663 | inside/outside 67.078 | high-saliency WT IoU 0.094 | clean correlation 0.850 | centroid shift 7.141
+ringing_L7 | patch WT Dice 0.8680 | inside/outside 125.524 | high-saliency WT IoU 0.069 | clean correlation 0.958 | centroid shift 7.269
+ringing_L8 | patch WT Dice 0.8217 | inside/outside 58.746 | high-saliency WT IoU 0.063 | clean correlation 0.897 | centroid shift 7.525
+ringing_L10 | patch WT Dice 0.5708 | inside/outside 22.899 | high-saliency WT IoU 0.109 | clean correlation 0.572 | centroid shift 13.947
+contrast_L10 | patch WT Dice 0.8925 | inside/outside 59.734 | high-saliency WT IoU 0.101 | clean correlation 0.990 | centroid shift 1.597
+
+Total runtime: 1.52 minutes
+Metrics: /home/xfh25/brats_segmentation_project/report_materials/nnunet_xai_37b/final/37b_nnunet_xai_condition_metrics.csv
+Configuration: /home/xfh25/brats_segmentation_project/report_materials/nnunet_xai_37b/final/37b_configuration.json
+Selected patients: /home/xfh25/brats_segmentation_project/report_materials/nnunet_xai_37b/final/37b_nnunet_xai_selected_patients.csv
+Figures: /home/xfh25/brats_segmentation_project/report_materials/nnunet_xai_37b/final/figures
+Arrays: /home/xfh25/brats_segmentation_project/report_materials/nnunet_xai_37b/final/arrays
+================================================================================
