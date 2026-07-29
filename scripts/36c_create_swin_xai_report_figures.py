@@ -211,19 +211,38 @@ def save_visual_comparison(
     title: str,
     output_name: str,
 ) -> None:
+    panel_ranges = [
+        (20, 689),
+        (814, 1483),
+        (1608, 2277),
+        (3196, 3865),
+    ]
+
+    panel_titles = [
+        "FLAIR",
+        "Ground-truth WT",
+        "Predicted WT",
+        "Grad-CAM overlay",
+    ]
+
+    vertical_crop = (
+        104,
+        773,
+    )
+
     figure, axes = plt.subplots(
         len(conditions),
-        1,
+        4,
         figsize=(
-            17,
-            4.5 * len(conditions),
+            14,
+            3.45 * len(conditions),
         ),
     )
 
     if len(conditions) == 1:
         axes = [axes]
 
-    for axis, condition in zip(
+    for row_axes, condition in zip(
         axes,
         conditions,
     ):
@@ -244,36 +263,80 @@ def save_visual_comparison(
             image_path
         )
 
-        axis.imshow(
-            image
-        )
-        axis.axis(
-            "off"
-        )
-        axis.set_title(
-            condition.replace(
+        y0, y1 = vertical_crop
+
+        for axis, (x0, x1), panel_title in zip(
+            row_axes,
+            panel_ranges,
+            panel_titles,
+        ):
+            panel = image[
+                y0:y1 + 1,
+                x0:x1 + 1,
+            ]
+
+            axis.imshow(
+                panel
+            )
+
+            axis.axis(
+                "off"
+            )
+
+            if condition == conditions[0]:
+                axis.set_title(
+                    panel_title,
+                    fontsize=13,
+                    pad=7,
+                )
+
+        row_label = (
+            "Fourier truncation L10"
+            if condition == "ringing_L10"
+            else condition.replace(
                 "_",
                 " ",
-            ),
+            ).title()
+        )
+
+        row_axes[0].text(
+            -0.08,
+            0.5,
+            row_label,
+            transform=row_axes[0].transAxes,
+            rotation=90,
+            va="center",
+            ha="center",
             fontsize=13,
+            fontweight="bold",
         )
 
     figure.suptitle(
-        title,
-        fontsize=16,
+        f"Swin-UNETR: {title}",
+        fontsize=17,
+        fontweight="bold",
+        y=0.995,
     )
 
-    figure.tight_layout(
-        rect=[0, 0, 1, 0.98]
+    figure.subplots_adjust(
+        left=0.055,
+        right=0.995,
+        bottom=0.02,
+        top=0.94,
+        wspace=0.035,
+        hspace=0.16,
     )
 
     figure.savefig(
         OUTPUT_DIR / output_name,
-        dpi=250,
+        dpi=300,
         bbox_inches="tight",
+        pad_inches=0.05,
     )
 
-    plt.close(figure)
+    plt.close(
+        figure
+    )
 
 
 def main() -> None:
@@ -334,7 +397,7 @@ def main() -> None:
             "contrast_L10",
         ],
         title=(
-            "Strong clean case: attribution under "
+            "High-performing case: attribution under "
             "ghosting and contrast reduction"
         ),
         output_name=(
