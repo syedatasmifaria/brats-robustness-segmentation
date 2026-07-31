@@ -1,0 +1,11 @@
+Artifact,Level,Clean WT Dice,Degraded WT Dice,Absolute Dice Drop,Relative Drop (%)
+Blur,5,0.763,0.623,0.139,18.3
+Blur,10,0.763,0.511,0.252,33.1
+Contrast reduction,5,0.763,0.763,0.0,0.0
+Contrast reduction,10,0.763,0.763,0.0,0.0
+Fourier truncation,5,0.763,0.758,0.004,0.6
+Fourier truncation,10,0.763,0.419,0.344,45.0
+Gaussian noise,5,0.763,0.766,-0.003,-0.5
+Gaussian noise,10,0.763,0.443,0.32,41.9
+Ghosting,5,0.763,0.661,0.102,13.3
+Ghosting,10,0.763,0.405,0.358,46.9

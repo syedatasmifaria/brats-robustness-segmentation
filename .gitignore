@@ -94,3 +94,24 @@ report_materials/swin_xai_36b/*/figures/
 report_materials/nnunet_xai_37b/*/arrays/
 
 !report_materials/nnunet_xai_37b/final/37b_nnunet_xai_condition_metrics.csv
+
+# =========================
+# Custom 3D U-Net Grad-CAM outputs
+# =========================
+report_materials/unet3d_xai_38b/*/arrays/
+report_materials/unet3d_xai_38b/smoke_*/
+report_materials/unet3d_xai_38b/*/figures/
+
+# Keep finalized lightweight XAI metrics/configuration/summary files.
+!report_materials/unet3d_xai_38b/final/38b_3d_unet_xai_condition_metrics.csv
+!report_materials/unet3d_xai_38b/final/38b_configuration.json
+!report_materials/unet3d_xai_38b/final/38b_3d_unet_xai_summary.txt
+
+# Temporary script backups and standalone Grad-CAM previews
+*.before_3d_unet_edit
+decoder2_gradcam.png
+decoder3_gradcam.png
+
+# Smoke-test artifacts
+report_materials/**/*smoke*/
+report_materials/*smoke*

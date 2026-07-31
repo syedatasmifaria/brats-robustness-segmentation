@@ -1,0 +1,37 @@
+================================================================================
+Script 38B: Custom 3D U-Net clean-versus-degraded Grad-CAM summary
+================================================================================
+
+Patients: 5
+Conditions per patient: 14
+Rows: 70
+Checkpoint epoch: 20
+Target layer: up3.conv
+Target definition: mean differentiable WT tumor score inside model-predicted WT region
+Ground truth guided patch coordinates only; it did not define the Grad-CAM target score.
+Patch-based XAI: Yes. Full-volume segmentation robustness metrics were evaluated separately.
+Grad-CAM interpretation: spatial attribution, not causal explanation.
+
+Mean metrics by condition
+--------------------------------------------------------------------------------
+clean | patch WT Dice 0.8654 | inside/outside 1919.055 | high-saliency WT IoU 0.103 | clean correlation 1.000 | centroid shift 0.000
+blur_L3 | patch WT Dice 0.8353 | inside/outside 499.873 | high-saliency WT IoU 0.103 | clean correlation 0.913 | centroid shift 2.082
+blur_L4 | patch WT Dice 0.8074 | inside/outside 264.614 | high-saliency WT IoU 0.103 | clean correlation 0.871 | centroid shift 2.609
+blur_L10 | patch WT Dice 0.6587 | inside/outside 37.762 | high-saliency WT IoU 0.103 | clean correlation 0.637 | centroid shift 5.416
+ghosting_L4 | patch WT Dice 0.8169 | inside/outside 505.041 | high-saliency WT IoU 0.103 | clean correlation 0.891 | centroid shift 4.279
+ghosting_L5 | patch WT Dice 0.7798 | inside/outside 58.473 | high-saliency WT IoU 0.103 | clean correlation 0.812 | centroid shift 7.212
+ghosting_L10 | patch WT Dice 0.5174 | inside/outside 5.762 | high-saliency WT IoU 0.103 | clean correlation 0.236 | centroid shift 19.037
+noise_L6 | patch WT Dice 0.8107 | inside/outside 7323.991 | high-saliency WT IoU 0.103 | clean correlation 0.917 | centroid shift 3.466
+noise_L7 | patch WT Dice 0.7660 | inside/outside 29088.586 | high-saliency WT IoU 0.103 | clean correlation 0.815 | centroid shift 5.196
+noise_L10 | patch WT Dice 0.3605 | inside/outside 88201.251 | high-saliency WT IoU 0.103 | clean correlation 0.196 | centroid shift 17.543
+ringing_L7 | patch WT Dice 0.8571 | inside/outside 790.147 | high-saliency WT IoU 0.103 | clean correlation 0.946 | centroid shift 1.449
+ringing_L8 | patch WT Dice 0.8110 | inside/outside 245.503 | high-saliency WT IoU 0.103 | clean correlation 0.851 | centroid shift 2.461
+ringing_L10 | patch WT Dice 0.5750 | inside/outside 14.471 | high-saliency WT IoU 0.103 | clean correlation 0.432 | centroid shift 7.892
+contrast_L10 | patch WT Dice 0.8644 | inside/outside 1334.591 | high-saliency WT IoU 0.103 | clean correlation 0.989 | centroid shift 0.677
+
+Total runtime: 2.07 minutes
+Metrics: /home/xfh25/brats_segmentation_project/report_materials/unet3d_xai_38b/final/38b_3d_unet_xai_condition_metrics.csv
+Configuration: /home/xfh25/brats_segmentation_project/report_materials/unet3d_xai_38b/final/38b_configuration.json
+Figures: /home/xfh25/brats_segmentation_project/report_materials/unet3d_xai_38b/final/figures
+Arrays: /home/xfh25/brats_segmentation_project/report_materials/unet3d_xai_38b/final/arrays
+================================================================================

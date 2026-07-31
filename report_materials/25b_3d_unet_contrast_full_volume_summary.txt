@@ -1,0 +1,37 @@
+================================================================================
+Script 25B: Custom 3D U-Net contrast full-volume evaluation
+================================================================================
+
+Clean-trained model: Yes
+Degradation used during training: No
+Full-volume sliding-window inference: Yes
+Patch size: 96 x 96 x 96
+Stride: 64 x 64 x 64
+Overlap combination: mean class probability
+Model preprocessing: nonzero-voxel z-score
+
+Rows: 740
+Unique patients: 74
+Conditions: 10
+
+Condition means
+--------------------------------------------------------------------------------
+contrast_L1 | WT Dice 0.763121 | WT IoU 0.638916 | Predicted WT voxels 118873.11 | True WT voxels 99706.23
+contrast_L2 | WT Dice 0.763117 | WT IoU 0.638911 | Predicted WT voxels 118873.62 | True WT voxels 99706.23
+contrast_L3 | WT Dice 0.763119 | WT IoU 0.638914 | Predicted WT voxels 118873.61 | True WT voxels 99706.23
+contrast_L4 | WT Dice 0.763120 | WT IoU 0.638914 | Predicted WT voxels 118873.53 | True WT voxels 99706.23
+contrast_L5 | WT Dice 0.763119 | WT IoU 0.638913 | Predicted WT voxels 118873.74 | True WT voxels 99706.23
+contrast_L6 | WT Dice 0.763121 | WT IoU 0.638916 | Predicted WT voxels 118873.68 | True WT voxels 99706.23
+contrast_L7 | WT Dice 0.763120 | WT IoU 0.638915 | Predicted WT voxels 118873.32 | True WT voxels 99706.23
+contrast_L8 | WT Dice 0.763118 | WT IoU 0.638912 | Predicted WT voxels 118873.28 | True WT voxels 99706.23
+contrast_L9 | WT Dice 0.763120 | WT IoU 0.638915 | Predicted WT voxels 118873.70 | True WT voxels 99706.23
+contrast_L10 | WT Dice 0.763119 | WT IoU 0.638914 | Predicted WT voxels 118873.64 | True WT voxels 99706.23
+
+Total evaluation time: 41.99 minutes
+
+Pipeline note:
+L1-L5 use the Script 26A restored-original-range degradation pipeline.
+Blur and ghosting L6-L10 also use the Script 26A pipeline.
+Noise, contrast, and Fourier truncation L6-L10 use the historical Script 29A normalized-[0,1] pipeline.
+The ringing condition should be reported as Fourier truncation / low-pass frequency stress test.
+================================================================================
