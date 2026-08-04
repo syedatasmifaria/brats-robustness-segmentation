@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Script 24B: Corrected full-volume clean evaluation for custom 4-modal 3D U-Net.
+Script 24C: Regional full-volume clean evaluation for custom 4-modal 3D U-Net.
 
 Purpose:
 - Load the already trained clean custom 3D U-Net.
@@ -51,11 +51,11 @@ REPORT_DIR = PROJECT_ROOT / "report_materials"
 RESULTS_DIR.mkdir(exist_ok=True)
 REPORT_DIR.mkdir(exist_ok=True)
 
-OUT_METRICS = RESULTS_DIR / "24b_full_volume_clean_corrected_metrics.csv"
-OUT_SUMMARY = RESULTS_DIR / "24b_full_volume_clean_corrected_summary.csv"
+OUT_METRICS = RESULTS_DIR / "24c_full_volume_clean_regional_metrics.csv"
+OUT_SUMMARY = RESULTS_DIR / "24c_full_volume_clean_regional_summary.csv"
 
-REPORT_SUMMARY_CSV = REPORT_DIR / "24b_full_volume_clean_corrected_summary.csv"
-REPORT_SUMMARY_TXT = REPORT_DIR / "24b_full_volume_clean_corrected_summary.txt"
+REPORT_SUMMARY_CSV = REPORT_DIR / "24c_full_volume_clean_regional_summary.csv"
+REPORT_SUMMARY_TXT = REPORT_DIR / "24c_full_volume_clean_regional_summary.txt"
 
 MODALITIES = ["flair", "t1", "t1ce", "t2"]
 
@@ -383,16 +383,13 @@ def iou_binary(pred_mask, true_mask, eps=1e-8):
 
 def compute_patient_metrics(pred, true):
     """
-    Compute regional and class-wise Dice/IoU.
+    Compute whole tumor and class-wise Dice/IoU.
 
-    Regions:
-    WT = labels 1, 2, and 3
-    TC = labels 1 and 3
-    ET = label 3
+    Whole tumor:
+    any foreground class > 0
     """
     metrics = {}
 
-    # Whole tumor: labels 1, 2, and 3
     pred_tumor = pred > 0
     true_tumor = true > 0
 
@@ -518,6 +515,23 @@ def main():
         "std_whole_tumor_dice": metrics_df["whole_tumor_dice"].std(),
         "mean_whole_tumor_iou": metrics_df["whole_tumor_iou"].mean(),
         "std_whole_tumor_iou": metrics_df["whole_tumor_iou"].std(),
+
+        "mean_tumor_core_dice": metrics_df["tumor_core_dice"].mean(),
+        "std_tumor_core_dice": metrics_df["tumor_core_dice"].std(),
+        "mean_tumor_core_iou": metrics_df["tumor_core_iou"].mean(),
+        "std_tumor_core_iou": metrics_df["tumor_core_iou"].std(),
+
+        "mean_enhancing_tumor_dice": metrics_df["enhancing_tumor_dice"].mean(),
+        "std_enhancing_tumor_dice": metrics_df["enhancing_tumor_dice"].std(),
+        "mean_enhancing_tumor_iou": metrics_df["enhancing_tumor_iou"].mean(),
+        "std_enhancing_tumor_iou": metrics_df["enhancing_tumor_iou"].std(),
+
+        "mean_macro_dice": np.mean([
+            metrics_df["whole_tumor_dice"].mean(),
+            metrics_df["tumor_core_dice"].mean(),
+            metrics_df["enhancing_tumor_dice"].mean(),
+        ]),
+
         "mean_dice_class_1": metrics_df["dice_class_1"].mean(),
         "mean_dice_class_2": metrics_df["dice_class_2"].mean(),
         "mean_dice_class_3": metrics_df["dice_class_3"].mean(),
@@ -556,12 +570,34 @@ def main():
         f.write(f"Stride: {STRIDE}\n")
         f.write(f"Test patients: {len(metrics_df)}\n\n")
 
-        f.write("Main full-volume clean results:\n")
+        f.write("Main full-volume clean regional results:\n")
         f.write("-" * 80 + "\n")
-        f.write(f"Mean whole tumor Dice: {summary['mean_whole_tumor_dice']:.6f}\n")
-        f.write(f"Std whole tumor Dice:  {summary['std_whole_tumor_dice']:.6f}\n")
-        f.write(f"Mean whole tumor IoU:  {summary['mean_whole_tumor_iou']:.6f}\n")
-        f.write(f"Std whole tumor IoU:   {summary['std_whole_tumor_iou']:.6f}\n\n")
+
+        f.write(
+            f"WT Dice: {summary['mean_whole_tumor_dice']:.6f} "
+            f"(SD {summary['std_whole_tumor_dice']:.6f})\n"
+        )
+        f.write(
+            f"WT IoU:  {summary['mean_whole_tumor_iou']:.6f} "
+            f"(SD {summary['std_whole_tumor_iou']:.6f})\n"
+        )
+        f.write(
+            f"TC Dice: {summary['mean_tumor_core_dice']:.6f} "
+            f"(SD {summary['std_tumor_core_dice']:.6f})\n"
+        )
+        f.write(
+            f"TC IoU:  {summary['mean_tumor_core_iou']:.6f} "
+            f"(SD {summary['std_tumor_core_iou']:.6f})\n"
+        )
+        f.write(
+            f"ET Dice: {summary['mean_enhancing_tumor_dice']:.6f} "
+            f"(SD {summary['std_enhancing_tumor_dice']:.6f})\n"
+        )
+        f.write(
+            f"ET IoU:  {summary['mean_enhancing_tumor_iou']:.6f} "
+            f"(SD {summary['std_enhancing_tumor_iou']:.6f})\n"
+        )
+        f.write(f"Macro Dice: {summary['mean_macro_dice']:.6f}\n\n")
 
         f.write("Class-wise results:\n")
         f.write("-" * 80 + "\n")

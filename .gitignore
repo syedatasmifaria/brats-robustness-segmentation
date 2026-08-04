@@ -115,3 +115,11 @@ decoder3_gradcam.png
 # Smoke-test artifacts
 report_materials/**/*smoke*/
 report_materials/*smoke*
+
+# Local terminal and recovery logs
+report_materials/swin_history_block_recovery.txt
+report_materials/swin_unetr_tmux_full_capture.txt
+report_materials/swin_unetr_tmux_shell_history.txt
+
+# Temporary script backup
+scripts/24b_evaluate_3d_unet_full_volume_clean_corrected_before_regional.py

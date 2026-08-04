@@ -1,0 +1,37 @@
+================================================================================
+Script 25B: Custom 3D U-Net blur full-volume evaluation
+================================================================================
+
+Clean-trained model: Yes
+Degradation used during training: No
+Full-volume sliding-window inference: Yes
+Patch size: 96 x 96 x 96
+Stride: 64 x 64 x 64
+Overlap combination: mean class probability
+Model preprocessing: nonzero-voxel z-score
+
+Rows: 740
+Unique patients: 74
+Conditions: 10
+
+Condition means
+--------------------------------------------------------------------------------
+blur_L1 | WT Dice 0.755153 | WT IoU 0.629861 | Predicted WT voxels 124044.89 | True WT voxels 99706.23
+blur_L2 | WT Dice 0.726325 | WT IoU 0.596297 | Predicted WT voxels 136777.24 | True WT voxels 99706.23
+blur_L3 | WT Dice 0.692241 | WT IoU 0.557248 | Predicted WT voxels 150512.22 | True WT voxels 99706.23
+blur_L4 | WT Dice 0.656080 | WT IoU 0.517185 | Predicted WT voxels 165697.70 | True WT voxels 99706.23
+blur_L5 | WT Dice 0.623378 | WT IoU 0.482009 | Predicted WT voxels 180546.20 | True WT voxels 99706.23
+blur_L6 | WT Dice 0.594273 | WT IoU 0.451715 | Predicted WT voxels 194993.45 | True WT voxels 99706.23
+blur_L7 | WT Dice 0.569083 | WT IoU 0.426505 | Predicted WT voxels 208617.26 | True WT voxels 99706.23
+blur_L8 | WT Dice 0.547405 | WT IoU 0.405377 | Predicted WT voxels 221269.99 | True WT voxels 99706.23
+blur_L9 | WT Dice 0.528136 | WT IoU 0.386896 | Predicted WT voxels 233296.96 | True WT voxels 99706.23
+blur_L10 | WT Dice 0.510656 | WT IoU 0.370414 | Predicted WT voxels 244919.39 | True WT voxels 99706.23
+
+Total evaluation time: 29.33 minutes
+
+Pipeline note:
+L1-L5 use the Script 26A restored-original-range degradation pipeline.
+Blur and ghosting L6-L10 also use the Script 26A pipeline.
+Noise, contrast, and Fourier truncation L6-L10 use the historical Script 29A normalized-[0,1] pipeline.
+The ringing condition should be reported as Fourier truncation / low-pass frequency stress test.
+================================================================================

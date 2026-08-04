@@ -1,0 +1,37 @@
+================================================================================
+Script 25B: Custom 3D U-Net noise full-volume evaluation
+================================================================================
+
+Clean-trained model: Yes
+Degradation used during training: No
+Full-volume sliding-window inference: Yes
+Patch size: 96 x 96 x 96
+Stride: 64 x 64 x 64
+Overlap combination: mean class probability
+Model preprocessing: nonzero-voxel z-score
+
+Rows: 740
+Unique patients: 74
+Conditions: 10
+
+Condition means
+--------------------------------------------------------------------------------
+noise_L1 | WT Dice 0.764486 | WT IoU 0.640538 | Predicted WT voxels 117666.23 | True WT voxels 99706.23
+noise_L2 | WT Dice 0.767059 | WT IoU 0.643272 | Predicted WT voxels 114640.78 | True WT voxels 99706.23
+noise_L3 | WT Dice 0.768523 | WT IoU 0.644454 | Predicted WT voxels 110873.45 | True WT voxels 99706.23
+noise_L4 | WT Dice 0.768200 | WT IoU 0.643465 | Predicted WT voxels 106987.89 | True WT voxels 99706.23
+noise_L5 | WT Dice 0.766250 | WT IoU 0.640275 | Predicted WT voxels 103055.12 | True WT voxels 99706.23
+noise_L6 | WT Dice 0.747358 | WT IoU 0.614122 | Predicted WT voxels 92161.58 | True WT voxels 99706.23
+noise_L7 | WT Dice 0.721965 | WT IoU 0.582175 | Predicted WT voxels 83079.61 | True WT voxels 99706.23
+noise_L8 | WT Dice 0.646140 | WT IoU 0.498762 | Predicted WT voxels 65629.70 | True WT voxels 99706.23
+noise_L9 | WT Dice 0.549508 | WT IoU 0.402663 | Predicted WT voxels 50520.76 | True WT voxels 99706.23
+noise_L10 | WT Dice 0.443081 | WT IoU 0.306450 | Predicted WT voxels 38293.01 | True WT voxels 99706.23
+
+Total evaluation time: 20.80 minutes
+
+Pipeline note:
+L1-L5 use the Script 26A restored-original-range degradation pipeline.
+Blur and ghosting L6-L10 also use the Script 26A pipeline.
+Noise, contrast, and Fourier truncation L6-L10 use the historical Script 29A normalized-[0,1] pipeline.
+The ringing condition should be reported as Fourier truncation / low-pass frequency stress test.
+================================================================================
